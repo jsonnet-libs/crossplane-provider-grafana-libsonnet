@@ -1,0 +1,17 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1alpha1', url='', help=''),
+  accessPolicy: (import 'accessPolicy.libsonnet'),
+  accessPolicyRotatingToken: (import 'accessPolicyRotatingToken.libsonnet'),
+  accessPolicyToken: (import 'accessPolicyToken.libsonnet'),
+  appo11YconfigV1Alpha1: (import 'appo11YconfigV1Alpha1.libsonnet'),
+  k8So11YconfigV1Alpha1: (import 'k8So11YconfigV1Alpha1.libsonnet'),
+  orgMember: (import 'orgMember.libsonnet'),
+  pluginInstallation: (import 'pluginInstallation.libsonnet'),
+  privateDataSourceConnectNetwork: (import 'privateDataSourceConnectNetwork.libsonnet'),
+  privateDataSourceConnectNetworkToken: (import 'privateDataSourceConnectNetworkToken.libsonnet'),
+  stack: (import 'stack.libsonnet'),
+  stackServiceAccount: (import 'stackServiceAccount.libsonnet'),
+  stackServiceAccountRotatingToken: (import 'stackServiceAccountRotatingToken.libsonnet'),
+  stackServiceAccountToken: (import 'stackServiceAccountToken.libsonnet'),
+}

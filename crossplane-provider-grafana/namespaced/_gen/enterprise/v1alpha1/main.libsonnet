@@ -1,13 +1,17 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
   '#':: d.pkg(name='v1alpha1', url='', help=''),
+  dataSourceCacheConfig: (import 'dataSourceCacheConfig.libsonnet'),
   dataSourceConfigLbacRules: (import 'dataSourceConfigLbacRules.libsonnet'),
   dataSourcePermission: (import 'dataSourcePermission.libsonnet'),
   dataSourcePermissionItem: (import 'dataSourcePermissionItem.libsonnet'),
+  keeperActivationV1Beta1: (import 'keeperActivationV1Beta1.libsonnet'),
+  keeperV1Beta1: (import 'keeperV1Beta1.libsonnet'),
   report: (import 'report.libsonnet'),
   role: (import 'role.libsonnet'),
   roleAssignment: (import 'roleAssignment.libsonnet'),
   roleAssignmentItem: (import 'roleAssignmentItem.libsonnet'),
   scimConfig: (import 'scimConfig.libsonnet'),
+  securevalueV1Beta1: (import 'securevalueV1Beta1.libsonnet'),
   teamExternalGroup: (import 'teamExternalGroup.libsonnet'),
 }

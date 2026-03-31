@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/cluster/oss/v1alpha1/annotation/
 
 # oss.v1alpha1.annotation
 
-"Annotation is the Schema for the Annotations API. Official documentation https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/annotations/"
+"Annotation is the Schema for the Annotations API. Manages Grafana annotations. Official documentation https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/annotations/"
 
 ## Index
 
@@ -330,7 +330,7 @@ withDashboardUid(dashboardUid)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.forProvider.withPanelId
 
@@ -564,7 +564,7 @@ withDashboardUid(dashboardUid)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.initProvider.withPanelId
 

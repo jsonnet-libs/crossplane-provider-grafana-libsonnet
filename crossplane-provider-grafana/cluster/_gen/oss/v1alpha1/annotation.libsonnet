@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='annotation', url='', help='"Annotation is the Schema for the Annotations API. Official documentation https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/annotations/"'),
+  '#':: d.pkg(name='annotation', url='', help='"Annotation is the Schema for the Annotations API. Manages Grafana annotations. Official documentation https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/annotations/"'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),
@@ -111,7 +111,7 @@
       },
       '#withDashboardUid':: d.fn(help='"(String) The UID of the dashboard on which to create the annotation.\\nThe UID of the dashboard on which to create the annotation."', args=[d.arg(name='dashboardUid', type=d.T.string)]),
       withDashboardUid(dashboardUid): { spec+: { forProvider+: { dashboardUid: dashboardUid } } },
-      '#withOrgId':: d.fn(help='"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."', args=[d.arg(name='orgId', type=d.T.string)]),
+      '#withOrgId':: d.fn(help='"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."', args=[d.arg(name='orgId', type=d.T.string)]),
       withOrgId(orgId): { spec+: { forProvider+: { orgId: orgId } } },
       '#withPanelId':: d.fn(help='"(Number) The ID of the dashboard panel on which to create the annotation.\\nThe ID of the dashboard panel on which to create the annotation."', args=[d.arg(name='panelId', type=d.T.number)]),
       withPanelId(panelId): { spec+: { forProvider+: { panelId: panelId } } },
@@ -186,7 +186,7 @@
       },
       '#withDashboardUid':: d.fn(help='"(String) The UID of the dashboard on which to create the annotation.\\nThe UID of the dashboard on which to create the annotation."', args=[d.arg(name='dashboardUid', type=d.T.string)]),
       withDashboardUid(dashboardUid): { spec+: { initProvider+: { dashboardUid: dashboardUid } } },
-      '#withOrgId':: d.fn(help='"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."', args=[d.arg(name='orgId', type=d.T.string)]),
+      '#withOrgId':: d.fn(help='"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."', args=[d.arg(name='orgId', type=d.T.string)]),
       withOrgId(orgId): { spec+: { initProvider+: { orgId: orgId } } },
       '#withPanelId':: d.fn(help='"(Number) The ID of the dashboard panel on which to create the annotation.\\nThe ID of the dashboard panel on which to create the annotation."', args=[d.arg(name='panelId', type=d.T.number)]),
       withPanelId(panelId): { spec+: { initProvider+: { panelId: panelId } } },

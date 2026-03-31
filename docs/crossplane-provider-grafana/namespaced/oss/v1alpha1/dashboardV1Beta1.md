@@ -33,16 +33,11 @@ permalink: /crossplane-provider-grafana/namespaced/oss/v1alpha1/dashboardV1Beta1
   * [`fn withManagementPolicies(managementPolicies)`](#fn-specwithmanagementpolicies)
   * [`fn withManagementPoliciesMixin(managementPolicies)`](#fn-specwithmanagementpoliciesmixin)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withMetadata(metadata)`](#fn-specforproviderwithmetadata)
-    * [`fn withMetadataMixin(metadata)`](#fn-specforproviderwithmetadatamixin)
-    * [`fn withOptions(options)`](#fn-specforproviderwithoptions)
-    * [`fn withOptionsMixin(options)`](#fn-specforproviderwithoptionsmixin)
-    * [`fn withSpec(spec)`](#fn-specforproviderwithspec)
-    * [`fn withSpecMixin(spec)`](#fn-specforproviderwithspecmixin)
     * [`obj spec.forProvider.metadata`](#obj-specforprovidermetadata)
       * [`fn withFolderUid(folderUid)`](#fn-specforprovidermetadatawithfolderuid)
       * [`fn withUid(uid)`](#fn-specforprovidermetadatawithuid)
     * [`obj spec.forProvider.options`](#obj-specforprovideroptions)
+      * [`fn withAllowUiUpdates(allowUiUpdates)`](#fn-specforprovideroptionswithallowuiupdates)
       * [`fn withOverwrite(overwrite)`](#fn-specforprovideroptionswithoverwrite)
     * [`obj spec.forProvider.spec`](#obj-specforproviderspec)
       * [`fn withJson(json)`](#fn-specforproviderspecwithjson)
@@ -50,16 +45,11 @@ permalink: /crossplane-provider-grafana/namespaced/oss/v1alpha1/dashboardV1Beta1
       * [`fn withTagsMixin(tags)`](#fn-specforproviderspecwithtagsmixin)
       * [`fn withTitle(title)`](#fn-specforproviderspecwithtitle)
   * [`obj spec.initProvider`](#obj-specinitprovider)
-    * [`fn withMetadata(metadata)`](#fn-specinitproviderwithmetadata)
-    * [`fn withMetadataMixin(metadata)`](#fn-specinitproviderwithmetadatamixin)
-    * [`fn withOptions(options)`](#fn-specinitproviderwithoptions)
-    * [`fn withOptionsMixin(options)`](#fn-specinitproviderwithoptionsmixin)
-    * [`fn withSpec(spec)`](#fn-specinitproviderwithspec)
-    * [`fn withSpecMixin(spec)`](#fn-specinitproviderwithspecmixin)
     * [`obj spec.initProvider.metadata`](#obj-specinitprovidermetadata)
       * [`fn withFolderUid(folderUid)`](#fn-specinitprovidermetadatawithfolderuid)
       * [`fn withUid(uid)`](#fn-specinitprovidermetadatawithuid)
     * [`obj spec.initProvider.options`](#obj-specinitprovideroptions)
+      * [`fn withAllowUiUpdates(allowUiUpdates)`](#fn-specinitprovideroptionswithallowuiupdates)
       * [`fn withOverwrite(overwrite)`](#fn-specinitprovideroptionswithoverwrite)
     * [`obj spec.initProvider.spec`](#obj-specinitproviderspec)
       * [`fn withJson(json)`](#fn-specinitproviderspecwithjson)
@@ -272,60 +262,6 @@ withManagementPoliciesMixin(managementPolicies)
 
 
 
-### fn spec.forProvider.withMetadata
-
-```ts
-withMetadata(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-### fn spec.forProvider.withMetadataMixin
-
-```ts
-withMetadataMixin(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withOptions
-
-```ts
-withOptions(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-### fn spec.forProvider.withOptionsMixin
-
-```ts
-withOptionsMixin(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withSpec
-
-```ts
-withSpec(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-### fn spec.forProvider.withSpecMixin
-
-```ts
-withSpecMixin(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-**Note:** This function appends passed data to existing values
-
 ## obj spec.forProvider.metadata
 
 "(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
@@ -349,6 +285,14 @@ withUid(uid)
 ## obj spec.forProvider.options
 
 "(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
+
+### fn spec.forProvider.options.withAllowUiUpdates
+
+```ts
+withAllowUiUpdates(allowUiUpdates)
+```
+
+"(Boolean) Set to true to allow editing the resource from the Grafana UI.\nSet to true to allow editing the resource from the Grafana UI."
 
 ### fn spec.forProvider.options.withOverwrite
 
@@ -400,60 +344,6 @@ withTitle(title)
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
 
-### fn spec.initProvider.withMetadata
-
-```ts
-withMetadata(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-### fn spec.initProvider.withMetadataMixin
-
-```ts
-withMetadataMixin(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.initProvider.withOptions
-
-```ts
-withOptions(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-### fn spec.initProvider.withOptionsMixin
-
-```ts
-withOptionsMixin(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.initProvider.withSpec
-
-```ts
-withSpec(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-### fn spec.initProvider.withSpecMixin
-
-```ts
-withSpecMixin(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-**Note:** This function appends passed data to existing values
-
 ## obj spec.initProvider.metadata
 
 "(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
@@ -477,6 +367,14 @@ withUid(uid)
 ## obj spec.initProvider.options
 
 "(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
+
+### fn spec.initProvider.options.withAllowUiUpdates
+
+```ts
+withAllowUiUpdates(allowUiUpdates)
+```
+
+"(Boolean) Set to true to allow editing the resource from the Grafana UI.\nSet to true to allow editing the resource from the Grafana UI."
 
 ### fn spec.initProvider.options.withOverwrite
 

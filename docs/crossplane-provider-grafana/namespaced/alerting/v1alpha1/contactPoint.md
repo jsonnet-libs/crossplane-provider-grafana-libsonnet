@@ -196,8 +196,25 @@ permalink: /crossplane-provider-grafana/namespaced/alerting/v1alpha1/contactPoin
       * [`obj spec.forProvider.oncall.basicAuthPasswordSecretRef`](#obj-specforprovideroncallbasicauthpasswordsecretref)
         * [`fn withKey(key)`](#fn-specforprovideroncallbasicauthpasswordsecretrefwithkey)
         * [`fn withName(name)`](#fn-specforprovideroncallbasicauthpasswordsecretrefwithname)
+      * [`obj spec.forProvider.oncall.oncallIntegrationRef`](#obj-specforprovideroncalloncallintegrationref)
+        * [`fn withName(name)`](#fn-specforprovideroncalloncallintegrationrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforprovideroncalloncallintegrationrefwithnamespace)
+        * [`obj spec.forProvider.oncall.oncallIntegrationRef.policy`](#obj-specforprovideroncalloncallintegrationrefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforprovideroncalloncallintegrationrefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforprovideroncalloncallintegrationrefpolicywithresolve)
+      * [`obj spec.forProvider.oncall.oncallIntegrationSelector`](#obj-specforprovideroncalloncallintegrationselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovideroncalloncallintegrationselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforprovideroncalloncallintegrationselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovideroncalloncallintegrationselectorwithmatchlabelsmixin)
+        * [`fn withNamespace(namespace)`](#fn-specforprovideroncalloncallintegrationselectorwithnamespace)
+        * [`obj spec.forProvider.oncall.oncallIntegrationSelector.policy`](#obj-specforprovideroncalloncallintegrationselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforprovideroncalloncallintegrationselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforprovideroncalloncallintegrationselectorpolicywithresolve)
       * [`obj spec.forProvider.oncall.settingsSecretRef`](#obj-specforprovideroncallsettingssecretref)
         * [`fn withName(name)`](#fn-specforprovideroncallsettingssecretrefwithname)
+      * [`obj spec.forProvider.oncall.urlSecretRef`](#obj-specforprovideroncallurlsecretref)
+        * [`fn withKey(key)`](#fn-specforprovideroncallurlsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specforprovideroncallurlsecretrefwithname)
     * [`obj spec.forProvider.opsgenie`](#obj-specforprovideropsgenie)
       * [`fn withAutoClose(autoClose)`](#fn-specforprovideropsgeniewithautoclose)
       * [`fn withDescription(description)`](#fn-specforprovideropsgeniewithdescription)
@@ -629,6 +646,23 @@ permalink: /crossplane-provider-grafana/namespaced/alerting/v1alpha1/contactPoin
       * [`obj spec.initProvider.oncall.basicAuthPasswordSecretRef`](#obj-specinitprovideroncallbasicauthpasswordsecretref)
         * [`fn withKey(key)`](#fn-specinitprovideroncallbasicauthpasswordsecretrefwithkey)
         * [`fn withName(name)`](#fn-specinitprovideroncallbasicauthpasswordsecretrefwithname)
+      * [`obj spec.initProvider.oncall.oncallIntegrationRef`](#obj-specinitprovideroncalloncallintegrationref)
+        * [`fn withName(name)`](#fn-specinitprovideroncalloncallintegrationrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specinitprovideroncalloncallintegrationrefwithnamespace)
+        * [`obj spec.initProvider.oncall.oncallIntegrationRef.policy`](#obj-specinitprovideroncalloncallintegrationrefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitprovideroncalloncallintegrationrefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitprovideroncalloncallintegrationrefpolicywithresolve)
+      * [`obj spec.initProvider.oncall.oncallIntegrationSelector`](#obj-specinitprovideroncalloncallintegrationselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitprovideroncalloncallintegrationselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specinitprovideroncalloncallintegrationselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitprovideroncalloncallintegrationselectorwithmatchlabelsmixin)
+        * [`fn withNamespace(namespace)`](#fn-specinitprovideroncalloncallintegrationselectorwithnamespace)
+        * [`obj spec.initProvider.oncall.oncallIntegrationSelector.policy`](#obj-specinitprovideroncalloncallintegrationselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitprovideroncalloncallintegrationselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitprovideroncalloncallintegrationselectorpolicywithresolve)
+      * [`obj spec.initProvider.oncall.urlSecretRef`](#obj-specinitprovideroncallurlsecretref)
+        * [`fn withKey(key)`](#fn-specinitprovideroncallurlsecretrefwithkey)
+        * [`fn withName(name)`](#fn-specinitprovideroncallurlsecretrefwithname)
     * [`obj spec.initProvider.opsgenie`](#obj-specinitprovideropsgenie)
       * [`fn withAutoClose(autoClose)`](#fn-specinitprovideropsgeniewithautoclose)
       * [`fn withDescription(description)`](#fn-specinitprovideropsgeniewithdescription)
@@ -2338,11 +2372,129 @@ withName(name)
 
 "Name of the secret."
 
+## obj spec.forProvider.oncall.oncallIntegrationRef
+
+"Reference to a Integration in oncall to populate url."
+
+### fn spec.forProvider.oncall.oncallIntegrationRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.oncall.oncallIntegrationRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.oncall.oncallIntegrationRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.oncall.oncallIntegrationRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.oncall.oncallIntegrationRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.oncall.oncallIntegrationSelector
+
+"Selector for a Integration in oncall to populate url."
+
+### fn spec.forProvider.oncall.oncallIntegrationSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.oncall.oncallIntegrationSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.oncall.oncallIntegrationSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.oncall.oncallIntegrationSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.oncall.oncallIntegrationSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.oncall.oncallIntegrationSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.oncall.oncallIntegrationSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.forProvider.oncall.settingsSecretRef
 
 "(Map of String, Sensitive) Additional custom properties to attach to the notifier. Defaults to map[].\nAdditional custom properties to attach to the notifier. Defaults to `map[]`."
 
 ### fn spec.forProvider.oncall.settingsSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+## obj spec.forProvider.oncall.urlSecretRef
+
+"The OnCall webhook URL (from secret)."
+
+### fn spec.forProvider.oncall.urlSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forProvider.oncall.urlSecretRef.withName
 
 ```ts
 withName(name)
@@ -5555,6 +5707,124 @@ withKey(key)
 
 
 ### fn spec.initProvider.oncall.basicAuthPasswordSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+## obj spec.initProvider.oncall.oncallIntegrationRef
+
+"Reference to a Integration in oncall to populate url."
+
+### fn spec.initProvider.oncall.oncallIntegrationRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.oncall.oncallIntegrationRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.oncall.oncallIntegrationRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.oncall.oncallIntegrationRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.oncall.oncallIntegrationRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.oncall.oncallIntegrationSelector
+
+"Selector for a Integration in oncall to populate url."
+
+### fn spec.initProvider.oncall.oncallIntegrationSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.oncall.oncallIntegrationSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.oncall.oncallIntegrationSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.oncall.oncallIntegrationSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.oncall.oncallIntegrationSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.oncall.oncallIntegrationSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.oncall.oncallIntegrationSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.oncall.urlSecretRef
+
+"The OnCall webhook URL (from secret)."
+
+### fn spec.initProvider.oncall.urlSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.initProvider.oncall.urlSecretRef.withName
 
 ```ts
 withName(name)

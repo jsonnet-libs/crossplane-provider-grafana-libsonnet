@@ -4,6 +4,7 @@
   alertenrichmentV1Beta1: (import 'alertenrichmentV1Beta1.libsonnet'),
   alertruleV0Alpha1: (import 'alertruleV0Alpha1.libsonnet'),
   contactPoint: (import 'contactPoint.libsonnet'),
+  inhibitionruleV1Beta1: (import 'inhibitionruleV1Beta1.libsonnet'),
   messageTemplate: (import 'messageTemplate.libsonnet'),
   muteTiming: (import 'muteTiming.libsonnet'),
   notificationPolicy: (import 'notificationPolicy.libsonnet'),

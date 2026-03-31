@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='alertenrichmentV1Beta1', url='', help='"AlertenrichmentV1Beta1 is the Schema for the AlertenrichmentV1Beta1s API. Manages Grafana Cloud Alert Enrichment https://grafana.com/docs/grafana-cloud/alerting-and-irm/alerting/configure-notifications/alert-enrichment/. Alert enrichment is currently in private preview. Grafana Labs offers support on a best-effort basis, and breaking changes might occur prior to the feature being made generally available"'),
+  '#':: d.pkg(name='alertenrichmentV1Beta1', url='', help='"AlertenrichmentV1Beta1 is the Schema for the AlertenrichmentV1Beta1s API. Manages Grafana Cloud Alert Enrichment https://grafana.com/docs/grafana-cloud/alerting-and-irm/alerting/configure-notifications/alert-enrichment/. Alert enrichment is currently in public preview. Grafana Labs offers limited support, and breaking changes might occur prior to the feature being made generally available."'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),

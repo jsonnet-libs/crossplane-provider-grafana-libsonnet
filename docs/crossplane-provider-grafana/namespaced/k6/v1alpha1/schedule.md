@@ -33,11 +33,7 @@ permalink: /crossplane-provider-grafana/namespaced/k6/v1alpha1/schedule/
   * [`fn withManagementPolicies(managementPolicies)`](#fn-specwithmanagementpolicies)
   * [`fn withManagementPoliciesMixin(managementPolicies)`](#fn-specwithmanagementpoliciesmixin)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withCron(cron)`](#fn-specforproviderwithcron)
-    * [`fn withCronMixin(cron)`](#fn-specforproviderwithcronmixin)
     * [`fn withLoadTestId(loadTestId)`](#fn-specforproviderwithloadtestid)
-    * [`fn withRecurrenceRule(recurrenceRule)`](#fn-specforproviderwithrecurrencerule)
-    * [`fn withRecurrenceRuleMixin(recurrenceRule)`](#fn-specforproviderwithrecurrencerulemixin)
     * [`fn withStarts(starts)`](#fn-specforproviderwithstarts)
     * [`obj spec.forProvider.cron`](#obj-specforprovidercron)
       * [`fn withSchedule(schedule)`](#fn-specforprovidercronwithschedule)
@@ -50,11 +46,7 @@ permalink: /crossplane-provider-grafana/namespaced/k6/v1alpha1/schedule/
       * [`fn withInterval(interval)`](#fn-specforproviderrecurrencerulewithinterval)
       * [`fn withUntil(until)`](#fn-specforproviderrecurrencerulewithuntil)
   * [`obj spec.initProvider`](#obj-specinitprovider)
-    * [`fn withCron(cron)`](#fn-specinitproviderwithcron)
-    * [`fn withCronMixin(cron)`](#fn-specinitproviderwithcronmixin)
     * [`fn withLoadTestId(loadTestId)`](#fn-specinitproviderwithloadtestid)
-    * [`fn withRecurrenceRule(recurrenceRule)`](#fn-specinitproviderwithrecurrencerule)
-    * [`fn withRecurrenceRuleMixin(recurrenceRule)`](#fn-specinitproviderwithrecurrencerulemixin)
     * [`fn withStarts(starts)`](#fn-specinitproviderwithstarts)
     * [`obj spec.initProvider.cron`](#obj-specinitprovidercron)
       * [`fn withSchedule(schedule)`](#fn-specinitprovidercronwithschedule)
@@ -272,24 +264,6 @@ withManagementPoliciesMixin(managementPolicies)
 
 
 
-### fn spec.forProvider.withCron
-
-```ts
-withCron(cron)
-```
-
-"(Block, Optional) The cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-### fn spec.forProvider.withCronMixin
-
-```ts
-withCronMixin(cron)
-```
-
-"(Block, Optional) The cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-**Note:** This function appends passed data to existing values
-
 ### fn spec.forProvider.withLoadTestId
 
 ```ts
@@ -297,24 +271,6 @@ withLoadTestId(loadTestId)
 ```
 
 "(String) The identifier of the load test to schedule.\nThe identifier of the load test to schedule."
-
-### fn spec.forProvider.withRecurrenceRule
-
-```ts
-withRecurrenceRule(recurrenceRule)
-```
-
-"(Block, Optional) The schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-### fn spec.forProvider.withRecurrenceRuleMixin
-
-```ts
-withRecurrenceRuleMixin(recurrenceRule)
-```
-
-"(Block, Optional) The schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-**Note:** This function appends passed data to existing values
 
 ### fn spec.forProvider.withStarts
 
@@ -402,24 +358,6 @@ withUntil(until)
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
 
-### fn spec.initProvider.withCron
-
-```ts
-withCron(cron)
-```
-
-"(Block, Optional) The cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-### fn spec.initProvider.withCronMixin
-
-```ts
-withCronMixin(cron)
-```
-
-"(Block, Optional) The cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe cron schedule to trigger the test periodically. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-**Note:** This function appends passed data to existing values
-
 ### fn spec.initProvider.withLoadTestId
 
 ```ts
@@ -427,24 +365,6 @@ withLoadTestId(loadTestId)
 ```
 
 "(String) The identifier of the load test to schedule.\nThe identifier of the load test to schedule."
-
-### fn spec.initProvider.withRecurrenceRule
-
-```ts
-withRecurrenceRule(recurrenceRule)
-```
-
-"(Block, Optional) The schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-### fn spec.initProvider.withRecurrenceRuleMixin
-
-```ts
-withRecurrenceRuleMixin(recurrenceRule)
-```
-
-"(Block, Optional) The schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of recurrence_rule and cron can be set. (see below for nested schema)\nThe schedule recurrence settings. If not specified, the test will run only once on the 'starts' date. Only one of `recurrence_rule` and `cron` can be set."
-
-**Note:** This function appends passed data to existing values
 
 ### fn spec.initProvider.withStarts
 

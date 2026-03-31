@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/cluster/alerting/v1alpha1/alertenrichmen
 
 # alerting.v1alpha1.alertenrichmentV1Beta1
 
-"AlertenrichmentV1Beta1 is the Schema for the AlertenrichmentV1Beta1s API. Manages Grafana Cloud Alert Enrichment https://grafana.com/docs/grafana-cloud/alerting-and-irm/alerting/configure-notifications/alert-enrichment/. Alert enrichment is currently in private preview. Grafana Labs offers support on a best-effort basis, and breaking changes might occur prior to the feature being made generally available"
+"AlertenrichmentV1Beta1 is the Schema for the AlertenrichmentV1Beta1s API. Manages Grafana Cloud Alert Enrichment https://grafana.com/docs/grafana-cloud/alerting-and-irm/alerting/configure-notifications/alert-enrichment/. Alert enrichment is currently in public preview. Grafana Labs offers limited support, and breaking changes might occur prior to the feature being made generally available."
 
 ## Index
 

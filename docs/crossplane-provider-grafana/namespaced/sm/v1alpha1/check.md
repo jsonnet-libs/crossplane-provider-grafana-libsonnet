@@ -40,6 +40,8 @@ permalink: /crossplane-provider-grafana/namespaced/sm/v1alpha1/check/
     * [`fn withJob(job)`](#fn-specforproviderwithjob)
     * [`fn withLabels(labels)`](#fn-specforproviderwithlabels)
     * [`fn withLabelsMixin(labels)`](#fn-specforproviderwithlabelsmixin)
+    * [`fn withProbeNames(probeNames)`](#fn-specforproviderwithprobenames)
+    * [`fn withProbeNamesMixin(probeNames)`](#fn-specforproviderwithprobenamesmixin)
     * [`fn withProbes(probes)`](#fn-specforproviderwithprobes)
     * [`fn withProbesMixin(probes)`](#fn-specforproviderwithprobesmixin)
     * [`fn withSettings(settings)`](#fn-specforproviderwithsettings)
@@ -244,6 +246,8 @@ permalink: /crossplane-provider-grafana/namespaced/sm/v1alpha1/check/
     * [`fn withJob(job)`](#fn-specinitproviderwithjob)
     * [`fn withLabels(labels)`](#fn-specinitproviderwithlabels)
     * [`fn withLabelsMixin(labels)`](#fn-specinitproviderwithlabelsmixin)
+    * [`fn withProbeNames(probeNames)`](#fn-specinitproviderwithprobenames)
+    * [`fn withProbeNamesMixin(probeNames)`](#fn-specinitproviderwithprobenamesmixin)
     * [`fn withProbes(probes)`](#fn-specinitproviderwithprobes)
     * [`fn withProbesMixin(probes)`](#fn-specinitproviderwithprobesmixin)
     * [`fn withSettings(settings)`](#fn-specinitproviderwithsettings)
@@ -701,6 +705,24 @@ withLabelsMixin(labels)
 ```
 
 "specific labels, to the outgoing metrics. The names and values of the labels cannot be empty, and the maximum length is 32 bytes.\nCustom labels to be included with collected metrics and logs. The maximum number of labels that can be specified per check is 5. These are applied, along with the probe-specific labels, to the outgoing metrics. The names and values of the labels cannot be empty, and the maximum length is 32 bytes."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.withProbeNames
+
+```ts
+withProbeNames(probeNames)
+```
+
+"CUSTOM FIELD: List of probe names to resolve to probe IDs.\nIf set, this will override the Probes field with the resolved probe IDs on every reconciliation.\nThis field is excluded from Terraform via tf:\"-\" tag."
+
+### fn spec.forProvider.withProbeNamesMixin
+
+```ts
+withProbeNamesMixin(probeNames)
+```
+
+"CUSTOM FIELD: List of probe names to resolve to probe IDs.\nIf set, this will override the Probes field with the resolved probe IDs on every reconciliation.\nThis field is excluded from Terraform via tf:\"-\" tag."
 
 **Note:** This function appends passed data to existing values
 
@@ -2285,6 +2307,24 @@ withLabelsMixin(labels)
 ```
 
 "specific labels, to the outgoing metrics. The names and values of the labels cannot be empty, and the maximum length is 32 bytes.\nCustom labels to be included with collected metrics and logs. The maximum number of labels that can be specified per check is 5. These are applied, along with the probe-specific labels, to the outgoing metrics. The names and values of the labels cannot be empty, and the maximum length is 32 bytes."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.withProbeNames
+
+```ts
+withProbeNames(probeNames)
+```
+
+"CUSTOM FIELD: List of probe names to resolve to probe IDs.\nIf set, this will override the Probes field with the resolved probe IDs on every reconciliation.\nThis field is excluded from Terraform via tf:\"-\" tag."
+
+### fn spec.initProvider.withProbeNamesMixin
+
+```ts
+withProbeNamesMixin(probeNames)
+```
+
+"CUSTOM FIELD: List of probe names to resolve to probe IDs.\nIf set, this will override the Probes field with the resolved probe IDs on every reconciliation.\nThis field is excluded from Terraform via tf:\"-\" tag."
 
 **Note:** This function appends passed data to existing values
 

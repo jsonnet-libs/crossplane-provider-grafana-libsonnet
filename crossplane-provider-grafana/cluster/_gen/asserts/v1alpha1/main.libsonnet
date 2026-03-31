@@ -6,6 +6,7 @@
   notificationAlertsConfig: (import 'notificationAlertsConfig.libsonnet'),
   profileConfig: (import 'profileConfig.libsonnet'),
   promRuleFile: (import 'promRuleFile.libsonnet'),
+  stack: (import 'stack.libsonnet'),
   suppressedAssertionsConfig: (import 'suppressedAssertionsConfig.libsonnet'),
   thresholds: (import 'thresholds.libsonnet'),
   traceConfig: (import 'traceConfig.libsonnet'),

@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/namespaced/cloudprovider/v1alpha1/awsAcc
 
 # cloudprovider.v1alpha1.awsAccount
 
-"AwsAccount is the Schema for the AwsAccounts API."
+"AwsAccount is the Schema for the AwsAccounts API. This resource allows you to link your AWS Account to Grafana Cloud for use in creating Cloud Provider resources. See the Grafana Provider configuration docs https://registry.io/providers/grafana/grafana/latest/docs#managing-cloud-provider for information on authentication and required access policy scopes. Official Grafana Cloud documentation https://grafana.com/docs/grafana-cloud/monitor-infrastructure/monitor-cloud-provider/aws/"
 
 ## Index
 

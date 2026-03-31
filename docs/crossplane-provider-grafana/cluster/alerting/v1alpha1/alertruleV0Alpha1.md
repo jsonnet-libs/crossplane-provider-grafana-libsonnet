@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/cluster/alerting/v1alpha1/alertruleV0Alp
 
 # alerting.v1alpha1.alertruleV0Alpha1
 
-"AlertruleV0Alpha1 is the Schema for the AlertruleV0Alpha1s API. <no value>"
+"AlertruleV0Alpha1 is the Schema for the AlertruleV0Alpha1s API. Manages Grafana Alert Rules. This resource is currently in alpha and is subject to change. Grafana 12.4+ users must enable the kubernetesAlertingRules feature toggle https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/feature-toggles/."
 
 ## Index
 
@@ -34,12 +34,6 @@ permalink: /crossplane-provider-grafana/cluster/alerting/v1alpha1/alertruleV0Alp
   * [`fn withManagementPolicies(managementPolicies)`](#fn-specwithmanagementpolicies)
   * [`fn withManagementPoliciesMixin(managementPolicies)`](#fn-specwithmanagementpoliciesmixin)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withMetadata(metadata)`](#fn-specforproviderwithmetadata)
-    * [`fn withMetadataMixin(metadata)`](#fn-specforproviderwithmetadatamixin)
-    * [`fn withOptions(options)`](#fn-specforproviderwithoptions)
-    * [`fn withOptionsMixin(options)`](#fn-specforproviderwithoptionsmixin)
-    * [`fn withSpec(spec)`](#fn-specforproviderwithspec)
-    * [`fn withSpecMixin(spec)`](#fn-specforproviderwithspecmixin)
     * [`obj spec.forProvider.metadata`](#obj-specforprovidermetadata)
       * [`fn withFolderUid(folderUid)`](#fn-specforprovidermetadatawithfolderuid)
       * [`fn withUid(uid)`](#fn-specforprovidermetadatawithuid)
@@ -57,14 +51,10 @@ permalink: /crossplane-provider-grafana/cluster/alerting/v1alpha1/alertruleV0Alp
       * [`fn withLabelsMixin(labels)`](#fn-specforproviderspecwithlabelsmixin)
       * [`fn withMissingSeriesEvalsToResolve(missingSeriesEvalsToResolve)`](#fn-specforproviderspecwithmissingseriesevalstoresolve)
       * [`fn withNoDataState(noDataState)`](#fn-specforproviderspecwithnodatastate)
-      * [`fn withNotificationSettings(notificationSettings)`](#fn-specforproviderspecwithnotificationsettings)
-      * [`fn withNotificationSettingsMixin(notificationSettings)`](#fn-specforproviderspecwithnotificationsettingsmixin)
       * [`fn withPanelRef(panelRef)`](#fn-specforproviderspecwithpanelref)
       * [`fn withPanelRefMixin(panelRef)`](#fn-specforproviderspecwithpanelrefmixin)
       * [`fn withPaused(paused)`](#fn-specforproviderspecwithpaused)
       * [`fn withTitle(title)`](#fn-specforproviderspecwithtitle)
-      * [`fn withTrigger(trigger)`](#fn-specforproviderspecwithtrigger)
-      * [`fn withTriggerMixin(trigger)`](#fn-specforproviderspecwithtriggermixin)
       * [`obj spec.forProvider.spec.notificationSettings`](#obj-specforproviderspecnotificationsettings)
         * [`fn withActiveTimings(activeTimings)`](#fn-specforproviderspecnotificationsettingswithactivetimings)
         * [`fn withActiveTimingsMixin(activeTimings)`](#fn-specforproviderspecnotificationsettingswithactivetimingsmixin)
@@ -79,12 +69,6 @@ permalink: /crossplane-provider-grafana/cluster/alerting/v1alpha1/alertruleV0Alp
       * [`obj spec.forProvider.spec.trigger`](#obj-specforproviderspectrigger)
         * [`fn withInterval(interval)`](#fn-specforproviderspectriggerwithinterval)
   * [`obj spec.initProvider`](#obj-specinitprovider)
-    * [`fn withMetadata(metadata)`](#fn-specinitproviderwithmetadata)
-    * [`fn withMetadataMixin(metadata)`](#fn-specinitproviderwithmetadatamixin)
-    * [`fn withOptions(options)`](#fn-specinitproviderwithoptions)
-    * [`fn withOptionsMixin(options)`](#fn-specinitproviderwithoptionsmixin)
-    * [`fn withSpec(spec)`](#fn-specinitproviderwithspec)
-    * [`fn withSpecMixin(spec)`](#fn-specinitproviderwithspecmixin)
     * [`obj spec.initProvider.metadata`](#obj-specinitprovidermetadata)
       * [`fn withFolderUid(folderUid)`](#fn-specinitprovidermetadatawithfolderuid)
       * [`fn withUid(uid)`](#fn-specinitprovidermetadatawithuid)
@@ -102,14 +86,10 @@ permalink: /crossplane-provider-grafana/cluster/alerting/v1alpha1/alertruleV0Alp
       * [`fn withLabelsMixin(labels)`](#fn-specinitproviderspecwithlabelsmixin)
       * [`fn withMissingSeriesEvalsToResolve(missingSeriesEvalsToResolve)`](#fn-specinitproviderspecwithmissingseriesevalstoresolve)
       * [`fn withNoDataState(noDataState)`](#fn-specinitproviderspecwithnodatastate)
-      * [`fn withNotificationSettings(notificationSettings)`](#fn-specinitproviderspecwithnotificationsettings)
-      * [`fn withNotificationSettingsMixin(notificationSettings)`](#fn-specinitproviderspecwithnotificationsettingsmixin)
       * [`fn withPanelRef(panelRef)`](#fn-specinitproviderspecwithpanelref)
       * [`fn withPanelRefMixin(panelRef)`](#fn-specinitproviderspecwithpanelrefmixin)
       * [`fn withPaused(paused)`](#fn-specinitproviderspecwithpaused)
       * [`fn withTitle(title)`](#fn-specinitproviderspecwithtitle)
-      * [`fn withTrigger(trigger)`](#fn-specinitproviderspecwithtrigger)
-      * [`fn withTriggerMixin(trigger)`](#fn-specinitproviderspecwithtriggermixin)
       * [`obj spec.initProvider.spec.notificationSettings`](#obj-specinitproviderspecnotificationsettings)
         * [`fn withActiveTimings(activeTimings)`](#fn-specinitproviderspecnotificationsettingswithactivetimings)
         * [`fn withActiveTimingsMixin(activeTimings)`](#fn-specinitproviderspecnotificationsettingswithactivetimingsmixin)
@@ -340,63 +320,9 @@ withManagementPoliciesMixin(managementPolicies)
 
 
 
-### fn spec.forProvider.withMetadata
-
-```ts
-withMetadata(metadata)
-```
-
-"The metadata of the resource."
-
-### fn spec.forProvider.withMetadataMixin
-
-```ts
-withMetadataMixin(metadata)
-```
-
-"The metadata of the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withOptions
-
-```ts
-withOptions(options)
-```
-
-"Options for applying the resource."
-
-### fn spec.forProvider.withOptionsMixin
-
-```ts
-withOptionsMixin(options)
-```
-
-"Options for applying the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withSpec
-
-```ts
-withSpec(spec)
-```
-
-"The spec of the resource."
-
-### fn spec.forProvider.withSpecMixin
-
-```ts
-withSpecMixin(spec)
-```
-
-"The spec of the resource."
-
-**Note:** This function appends passed data to existing values
-
 ## obj spec.forProvider.metadata
 
-"The metadata of the resource."
+"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
 
 ### fn spec.forProvider.metadata.withFolderUid
 
@@ -404,7 +330,7 @@ withSpecMixin(spec)
 withFolderUid(folderUid)
 ```
 
-"The UID of the folder to save the resource in."
+"(String) The UID of the folder to save the resource in.\nThe UID of the folder to save the resource in."
 
 ### fn spec.forProvider.metadata.withUid
 
@@ -412,11 +338,11 @@ withFolderUid(folderUid)
 withUid(uid)
 ```
 
-"The unique identifier of the resource."
+"(String) The unique identifier of the resource.\nThe unique identifier of the resource."
 
 ## obj spec.forProvider.options
 
-"Options for applying the resource."
+"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
 
 ### fn spec.forProvider.options.withOverwrite
 
@@ -424,11 +350,11 @@ withUid(uid)
 withOverwrite(overwrite)
 ```
 
-"Set to true if you want to overwrite existing resource with newer version, same resource title in folder or same resource uid."
+"(Boolean) Set to true if you want to overwrite existing resource with newer version, same resource title in folder or same resource uid.\nSet to true if you want to overwrite existing resource with newer version, same resource title in folder or same resource uid."
 
 ## obj spec.forProvider.spec
 
-"The spec of the resource."
+"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
 
 ### fn spec.forProvider.spec.withAnnotations
 
@@ -436,7 +362,7 @@ withOverwrite(overwrite)
 withAnnotations(annotations)
 ```
 
-"Key-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
+"(Map of String) Annotations of the resource.\nKey-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
 
 ### fn spec.forProvider.spec.withAnnotationsMixin
 
@@ -444,7 +370,7 @@ withAnnotations(annotations)
 withAnnotationsMixin(annotations)
 ```
 
-"Key-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
+"(Map of String) Annotations of the resource.\nKey-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
 
 **Note:** This function appends passed data to existing values
 
@@ -454,7 +380,7 @@ withAnnotationsMixin(annotations)
 withExecErrState(execErrState)
 ```
 
-"Describes what state to enter when the rule's query is invalid and the rule cannot be executed. Options are OK, Error, KeepLast, and Alerting."
+"(String) Describes what state to enter when the rule's query is invalid and the rule cannot be executed. Options are OK, Error, KeepLast, and Alerting.\nDescribes what state to enter when the rule's query is invalid and the rule cannot be executed. Options are OK, Error, KeepLast, and Alerting."
 
 ### fn spec.forProvider.spec.withExpressions
 
@@ -462,7 +388,7 @@ withExecErrState(execErrState)
 withExpressions(expressions)
 ```
 
-"A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
+"(Map of String) A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object.\nA sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
 
 ### fn spec.forProvider.spec.withExpressionsMixin
 
@@ -470,7 +396,7 @@ withExpressions(expressions)
 withExpressionsMixin(expressions)
 ```
 
-"A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
+"(Map of String) A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object.\nA sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
 
 **Note:** This function appends passed data to existing values
 
@@ -480,7 +406,7 @@ withExpressionsMixin(expressions)
 withFor(For)
 ```
 
-"The amount of time for which the rule must be breached for the rule to be considered to be Firing. Before this time has elapsed, the rule is only considered to be Pending."
+"(String) The amount of time for which the rule must be breached for the rule to be considered to be Firing. Before this time has elapsed, the rule is only considered to be Pending.\nThe amount of time for which the rule must be breached for the rule to be considered to be Firing. Before this time has elapsed, the rule is only considered to be Pending."
 
 ### fn spec.forProvider.spec.withKeepFiringFor
 
@@ -488,7 +414,7 @@ withFor(For)
 withKeepFiringFor(keepFiringFor)
 ```
 
-"The amount of time for which the rule will considered to be Recovering after initially Firing. Before this time has elapsed, the rule will continue to fire once it's been triggered."
+"(String) The amount of time for which the rule will considered to be Recovering after initially Firing. Before this time has elapsed, the rule will continue to fire once it's been triggered.\nThe amount of time for which the rule will considered to be Recovering after initially Firing. Before this time has elapsed, the rule will continue to fire once it's been triggered."
 
 ### fn spec.forProvider.spec.withLabels
 
@@ -496,7 +422,7 @@ withKeepFiringFor(keepFiringFor)
 withLabels(labels)
 ```
 
-"Key-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
+"value pairs to attach to the alert rule that can be used in matching, grouping, and routing.\nKey-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
 
 ### fn spec.forProvider.spec.withLabelsMixin
 
@@ -504,7 +430,7 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"Key-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
+"value pairs to attach to the alert rule that can be used in matching, grouping, and routing.\nKey-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
 
 **Note:** This function appends passed data to existing values
 
@@ -514,7 +440,7 @@ withLabelsMixin(labels)
 withMissingSeriesEvalsToResolve(missingSeriesEvalsToResolve)
 ```
 
-"The number of missing series evaluations that must occur before the rule is considered to be resolved."
+"(Number) The number of missing series evaluations that must occur before the rule is considered to be resolved.\nThe number of missing series evaluations that must occur before the rule is considered to be resolved."
 
 ### fn spec.forProvider.spec.withNoDataState
 
@@ -522,25 +448,7 @@ withMissingSeriesEvalsToResolve(missingSeriesEvalsToResolve)
 withNoDataState(noDataState)
 ```
 
-"Describes what state to enter when the rule's query returns No Data. Options are OK, NoData, KeepLast, and Alerting."
-
-### fn spec.forProvider.spec.withNotificationSettings
-
-```ts
-withNotificationSettings(notificationSettings)
-```
-
-"Notification settings for the rule. If specified, it overrides the notification policies."
-
-### fn spec.forProvider.spec.withNotificationSettingsMixin
-
-```ts
-withNotificationSettingsMixin(notificationSettings)
-```
-
-"Notification settings for the rule. If specified, it overrides the notification policies."
-
-**Note:** This function appends passed data to existing values
+"(String) Describes what state to enter when the rule's query returns No Data. Options are OK, NoData, KeepLast, and Alerting.\nDescribes what state to enter when the rule's query returns No Data. Options are OK, NoData, KeepLast, and Alerting."
 
 ### fn spec.forProvider.spec.withPanelRef
 
@@ -548,7 +456,7 @@ withNotificationSettingsMixin(notificationSettings)
 withPanelRef(panelRef)
 ```
 
-"Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
+"(Map of String) Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields.\nReference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
 
 ### fn spec.forProvider.spec.withPanelRefMixin
 
@@ -556,7 +464,7 @@ withPanelRef(panelRef)
 withPanelRefMixin(panelRef)
 ```
 
-"Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
+"(Map of String) Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields.\nReference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
 
 **Note:** This function appends passed data to existing values
 
@@ -566,7 +474,7 @@ withPanelRefMixin(panelRef)
 withPaused(paused)
 ```
 
-"Sets whether the rule should be paused or not."
+"(Boolean) Sets whether the rule should be paused or not.\nSets whether the rule should be paused or not."
 
 ### fn spec.forProvider.spec.withTitle
 
@@ -574,29 +482,11 @@ withPaused(paused)
 withTitle(title)
 ```
 
-"The title of the alert rule."
-
-### fn spec.forProvider.spec.withTrigger
-
-```ts
-withTrigger(trigger)
-```
-
-"The trigger configuration for the alert rule."
-
-### fn spec.forProvider.spec.withTriggerMixin
-
-```ts
-withTriggerMixin(trigger)
-```
-
-"The trigger configuration for the alert rule."
-
-**Note:** This function appends passed data to existing values
+"(String) The title of the alert rule.\nThe title of the alert rule."
 
 ## obj spec.forProvider.spec.notificationSettings
 
-"Notification settings for the rule. If specified, it overrides the notification policies."
+"(Block, Optional) Notification settings for the rule. If specified, it overrides the notification policies. (see below for nested schema)\nNotification settings for the rule. If specified, it overrides the notification policies."
 
 ### fn spec.forProvider.spec.notificationSettings.withActiveTimings
 
@@ -604,7 +494,7 @@ withTriggerMixin(trigger)
 withActiveTimings(activeTimings)
 ```
 
-"A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
+"(List of String) A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time.\nA list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
 
 ### fn spec.forProvider.spec.notificationSettings.withActiveTimingsMixin
 
@@ -612,7 +502,7 @@ withActiveTimings(activeTimings)
 withActiveTimingsMixin(activeTimings)
 ```
 
-"A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
+"(List of String) A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time.\nA list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
 
 **Note:** This function appends passed data to existing values
 
@@ -622,7 +512,7 @@ withActiveTimingsMixin(activeTimings)
 withContactPoint(contactPoint)
 ```
 
-"The contact point to route notifications that match this rule to."
+"(String) The contact point to route notifications that match this rule to.\nThe contact point to route notifications that match this rule to."
 
 ### fn spec.forProvider.spec.notificationSettings.withGroupBy
 
@@ -630,7 +520,7 @@ withContactPoint(contactPoint)
 withGroupBy(groupBy)
 ```
 
-"A list of alert labels to group alerts into notifications by."
+"(List of String) A list of alert labels to group alerts into notifications by.\nA list of alert labels to group alerts into notifications by."
 
 ### fn spec.forProvider.spec.notificationSettings.withGroupByMixin
 
@@ -638,7 +528,7 @@ withGroupBy(groupBy)
 withGroupByMixin(groupBy)
 ```
 
-"A list of alert labels to group alerts into notifications by."
+"(List of String) A list of alert labels to group alerts into notifications by.\nA list of alert labels to group alerts into notifications by."
 
 **Note:** This function appends passed data to existing values
 
@@ -648,7 +538,7 @@ withGroupByMixin(groupBy)
 withGroupInterval(groupInterval)
 ```
 
-"Minimum time interval between two notifications for the same group."
+"(String) Minimum time interval between two notifications for the same group.\nMinimum time interval between two notifications for the same group."
 
 ### fn spec.forProvider.spec.notificationSettings.withGroupWait
 
@@ -656,7 +546,7 @@ withGroupInterval(groupInterval)
 withGroupWait(groupWait)
 ```
 
-"Time to wait to buffer alerts of the same group before sending a notification."
+"(String) Time to wait to buffer alerts of the same group before sending a notification.\nTime to wait to buffer alerts of the same group before sending a notification."
 
 ### fn spec.forProvider.spec.notificationSettings.withMuteTimings
 
@@ -664,7 +554,7 @@ withGroupWait(groupWait)
 withMuteTimings(muteTimings)
 ```
 
-"A list of mute timing names to apply to alerts that match this policy."
+"(List of String) A list of mute timing names to apply to alerts that match this policy.\nA list of mute timing names to apply to alerts that match this policy."
 
 ### fn spec.forProvider.spec.notificationSettings.withMuteTimingsMixin
 
@@ -672,7 +562,7 @@ withMuteTimings(muteTimings)
 withMuteTimingsMixin(muteTimings)
 ```
 
-"A list of mute timing names to apply to alerts that match this policy."
+"(List of String) A list of mute timing names to apply to alerts that match this policy.\nA list of mute timing names to apply to alerts that match this policy."
 
 **Note:** This function appends passed data to existing values
 
@@ -682,11 +572,11 @@ withMuteTimingsMixin(muteTimings)
 withRepeatInterval(repeatInterval)
 ```
 
-"Minimum time interval for re-sending a notification if an alert is still firing."
+"sending a notification if an alert is still firing.\nMinimum time interval for re-sending a notification if an alert is still firing."
 
 ## obj spec.forProvider.spec.trigger
 
-"The trigger configuration for the alert rule."
+"(Block, Optional) The trigger configuration for the alert rule. (see below for nested schema)\nThe trigger configuration for the alert rule."
 
 ### fn spec.forProvider.spec.trigger.withInterval
 
@@ -694,69 +584,15 @@ withRepeatInterval(repeatInterval)
 withInterval(interval)
 ```
 
-"The interval at which the alert rule should be evaluated."
+"(String) The interval at which the alert rule should be evaluated.\nThe interval at which the alert rule should be evaluated."
 
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
 
-### fn spec.initProvider.withMetadata
-
-```ts
-withMetadata(metadata)
-```
-
-"The metadata of the resource."
-
-### fn spec.initProvider.withMetadataMixin
-
-```ts
-withMetadataMixin(metadata)
-```
-
-"The metadata of the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.initProvider.withOptions
-
-```ts
-withOptions(options)
-```
-
-"Options for applying the resource."
-
-### fn spec.initProvider.withOptionsMixin
-
-```ts
-withOptionsMixin(options)
-```
-
-"Options for applying the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.initProvider.withSpec
-
-```ts
-withSpec(spec)
-```
-
-"The spec of the resource."
-
-### fn spec.initProvider.withSpecMixin
-
-```ts
-withSpecMixin(spec)
-```
-
-"The spec of the resource."
-
-**Note:** This function appends passed data to existing values
-
 ## obj spec.initProvider.metadata
 
-"The metadata of the resource."
+"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
 
 ### fn spec.initProvider.metadata.withFolderUid
 
@@ -764,7 +600,7 @@ withSpecMixin(spec)
 withFolderUid(folderUid)
 ```
 
-"The UID of the folder to save the resource in."
+"(String) The UID of the folder to save the resource in.\nThe UID of the folder to save the resource in."
 
 ### fn spec.initProvider.metadata.withUid
 
@@ -772,11 +608,11 @@ withFolderUid(folderUid)
 withUid(uid)
 ```
 
-"The unique identifier of the resource."
+"(String) The unique identifier of the resource.\nThe unique identifier of the resource."
 
 ## obj spec.initProvider.options
 
-"Options for applying the resource."
+"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
 
 ### fn spec.initProvider.options.withOverwrite
 
@@ -784,11 +620,11 @@ withUid(uid)
 withOverwrite(overwrite)
 ```
 
-"Set to true if you want to overwrite existing resource with newer version, same resource title in folder or same resource uid."
+"(Boolean) Set to true if you want to overwrite existing resource with newer version, same resource title in folder or same resource uid.\nSet to true if you want to overwrite existing resource with newer version, same resource title in folder or same resource uid."
 
 ## obj spec.initProvider.spec
 
-"The spec of the resource."
+"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
 
 ### fn spec.initProvider.spec.withAnnotations
 
@@ -796,7 +632,7 @@ withOverwrite(overwrite)
 withAnnotations(annotations)
 ```
 
-"Key-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
+"(Map of String) Annotations of the resource.\nKey-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
 
 ### fn spec.initProvider.spec.withAnnotationsMixin
 
@@ -804,7 +640,7 @@ withAnnotations(annotations)
 withAnnotationsMixin(annotations)
 ```
 
-"Key-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
+"(Map of String) Annotations of the resource.\nKey-value pairs of metadata to attach to the alert rule. They add additional information, such as a `summary` or `runbook_url`, to help identify and investigate alerts."
 
 **Note:** This function appends passed data to existing values
 
@@ -814,7 +650,7 @@ withAnnotationsMixin(annotations)
 withExecErrState(execErrState)
 ```
 
-"Describes what state to enter when the rule's query is invalid and the rule cannot be executed. Options are OK, Error, KeepLast, and Alerting."
+"(String) Describes what state to enter when the rule's query is invalid and the rule cannot be executed. Options are OK, Error, KeepLast, and Alerting.\nDescribes what state to enter when the rule's query is invalid and the rule cannot be executed. Options are OK, Error, KeepLast, and Alerting."
 
 ### fn spec.initProvider.spec.withExpressions
 
@@ -822,7 +658,7 @@ withExecErrState(execErrState)
 withExpressions(expressions)
 ```
 
-"A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
+"(Map of String) A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object.\nA sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
 
 ### fn spec.initProvider.spec.withExpressionsMixin
 
@@ -830,7 +666,7 @@ withExpressions(expressions)
 withExpressionsMixin(expressions)
 ```
 
-"A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
+"(Map of String) A sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object.\nA sequence of stages that describe the contents of the rule. Each value is a JSON string representing an expression object."
 
 **Note:** This function appends passed data to existing values
 
@@ -840,7 +676,7 @@ withExpressionsMixin(expressions)
 withFor(For)
 ```
 
-"The amount of time for which the rule must be breached for the rule to be considered to be Firing. Before this time has elapsed, the rule is only considered to be Pending."
+"(String) The amount of time for which the rule must be breached for the rule to be considered to be Firing. Before this time has elapsed, the rule is only considered to be Pending.\nThe amount of time for which the rule must be breached for the rule to be considered to be Firing. Before this time has elapsed, the rule is only considered to be Pending."
 
 ### fn spec.initProvider.spec.withKeepFiringFor
 
@@ -848,7 +684,7 @@ withFor(For)
 withKeepFiringFor(keepFiringFor)
 ```
 
-"The amount of time for which the rule will considered to be Recovering after initially Firing. Before this time has elapsed, the rule will continue to fire once it's been triggered."
+"(String) The amount of time for which the rule will considered to be Recovering after initially Firing. Before this time has elapsed, the rule will continue to fire once it's been triggered.\nThe amount of time for which the rule will considered to be Recovering after initially Firing. Before this time has elapsed, the rule will continue to fire once it's been triggered."
 
 ### fn spec.initProvider.spec.withLabels
 
@@ -856,7 +692,7 @@ withKeepFiringFor(keepFiringFor)
 withLabels(labels)
 ```
 
-"Key-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
+"value pairs to attach to the alert rule that can be used in matching, grouping, and routing.\nKey-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
 
 ### fn spec.initProvider.spec.withLabelsMixin
 
@@ -864,7 +700,7 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"Key-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
+"value pairs to attach to the alert rule that can be used in matching, grouping, and routing.\nKey-value pairs to attach to the alert rule that can be used in matching, grouping, and routing."
 
 **Note:** This function appends passed data to existing values
 
@@ -874,7 +710,7 @@ withLabelsMixin(labels)
 withMissingSeriesEvalsToResolve(missingSeriesEvalsToResolve)
 ```
 
-"The number of missing series evaluations that must occur before the rule is considered to be resolved."
+"(Number) The number of missing series evaluations that must occur before the rule is considered to be resolved.\nThe number of missing series evaluations that must occur before the rule is considered to be resolved."
 
 ### fn spec.initProvider.spec.withNoDataState
 
@@ -882,25 +718,7 @@ withMissingSeriesEvalsToResolve(missingSeriesEvalsToResolve)
 withNoDataState(noDataState)
 ```
 
-"Describes what state to enter when the rule's query returns No Data. Options are OK, NoData, KeepLast, and Alerting."
-
-### fn spec.initProvider.spec.withNotificationSettings
-
-```ts
-withNotificationSettings(notificationSettings)
-```
-
-"Notification settings for the rule. If specified, it overrides the notification policies."
-
-### fn spec.initProvider.spec.withNotificationSettingsMixin
-
-```ts
-withNotificationSettingsMixin(notificationSettings)
-```
-
-"Notification settings for the rule. If specified, it overrides the notification policies."
-
-**Note:** This function appends passed data to existing values
+"(String) Describes what state to enter when the rule's query returns No Data. Options are OK, NoData, KeepLast, and Alerting.\nDescribes what state to enter when the rule's query returns No Data. Options are OK, NoData, KeepLast, and Alerting."
 
 ### fn spec.initProvider.spec.withPanelRef
 
@@ -908,7 +726,7 @@ withNotificationSettingsMixin(notificationSettings)
 withPanelRef(panelRef)
 ```
 
-"Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
+"(Map of String) Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields.\nReference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
 
 ### fn spec.initProvider.spec.withPanelRefMixin
 
@@ -916,7 +734,7 @@ withPanelRef(panelRef)
 withPanelRefMixin(panelRef)
 ```
 
-"Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
+"(Map of String) Reference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields.\nReference to a panel that this alert rule is associated with. Should be an object with 'dashboard_uid' (string) and 'panel_id' (number) fields."
 
 **Note:** This function appends passed data to existing values
 
@@ -926,7 +744,7 @@ withPanelRefMixin(panelRef)
 withPaused(paused)
 ```
 
-"Sets whether the rule should be paused or not."
+"(Boolean) Sets whether the rule should be paused or not.\nSets whether the rule should be paused or not."
 
 ### fn spec.initProvider.spec.withTitle
 
@@ -934,29 +752,11 @@ withPaused(paused)
 withTitle(title)
 ```
 
-"The title of the alert rule."
-
-### fn spec.initProvider.spec.withTrigger
-
-```ts
-withTrigger(trigger)
-```
-
-"The trigger configuration for the alert rule."
-
-### fn spec.initProvider.spec.withTriggerMixin
-
-```ts
-withTriggerMixin(trigger)
-```
-
-"The trigger configuration for the alert rule."
-
-**Note:** This function appends passed data to existing values
+"(String) The title of the alert rule.\nThe title of the alert rule."
 
 ## obj spec.initProvider.spec.notificationSettings
 
-"Notification settings for the rule. If specified, it overrides the notification policies."
+"(Block, Optional) Notification settings for the rule. If specified, it overrides the notification policies. (see below for nested schema)\nNotification settings for the rule. If specified, it overrides the notification policies."
 
 ### fn spec.initProvider.spec.notificationSettings.withActiveTimings
 
@@ -964,7 +764,7 @@ withTriggerMixin(trigger)
 withActiveTimings(activeTimings)
 ```
 
-"A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
+"(List of String) A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time.\nA list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
 
 ### fn spec.initProvider.spec.notificationSettings.withActiveTimingsMixin
 
@@ -972,7 +772,7 @@ withActiveTimings(activeTimings)
 withActiveTimingsMixin(activeTimings)
 ```
 
-"A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
+"(List of String) A list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time.\nA list of time interval names to apply to alerts that match this policy to suppress them unless they are sent at the specified time."
 
 **Note:** This function appends passed data to existing values
 
@@ -982,7 +782,7 @@ withActiveTimingsMixin(activeTimings)
 withContactPoint(contactPoint)
 ```
 
-"The contact point to route notifications that match this rule to."
+"(String) The contact point to route notifications that match this rule to.\nThe contact point to route notifications that match this rule to."
 
 ### fn spec.initProvider.spec.notificationSettings.withGroupBy
 
@@ -990,7 +790,7 @@ withContactPoint(contactPoint)
 withGroupBy(groupBy)
 ```
 
-"A list of alert labels to group alerts into notifications by."
+"(List of String) A list of alert labels to group alerts into notifications by.\nA list of alert labels to group alerts into notifications by."
 
 ### fn spec.initProvider.spec.notificationSettings.withGroupByMixin
 
@@ -998,7 +798,7 @@ withGroupBy(groupBy)
 withGroupByMixin(groupBy)
 ```
 
-"A list of alert labels to group alerts into notifications by."
+"(List of String) A list of alert labels to group alerts into notifications by.\nA list of alert labels to group alerts into notifications by."
 
 **Note:** This function appends passed data to existing values
 
@@ -1008,7 +808,7 @@ withGroupByMixin(groupBy)
 withGroupInterval(groupInterval)
 ```
 
-"Minimum time interval between two notifications for the same group."
+"(String) Minimum time interval between two notifications for the same group.\nMinimum time interval between two notifications for the same group."
 
 ### fn spec.initProvider.spec.notificationSettings.withGroupWait
 
@@ -1016,7 +816,7 @@ withGroupInterval(groupInterval)
 withGroupWait(groupWait)
 ```
 
-"Time to wait to buffer alerts of the same group before sending a notification."
+"(String) Time to wait to buffer alerts of the same group before sending a notification.\nTime to wait to buffer alerts of the same group before sending a notification."
 
 ### fn spec.initProvider.spec.notificationSettings.withMuteTimings
 
@@ -1024,7 +824,7 @@ withGroupWait(groupWait)
 withMuteTimings(muteTimings)
 ```
 
-"A list of mute timing names to apply to alerts that match this policy."
+"(List of String) A list of mute timing names to apply to alerts that match this policy.\nA list of mute timing names to apply to alerts that match this policy."
 
 ### fn spec.initProvider.spec.notificationSettings.withMuteTimingsMixin
 
@@ -1032,7 +832,7 @@ withMuteTimings(muteTimings)
 withMuteTimingsMixin(muteTimings)
 ```
 
-"A list of mute timing names to apply to alerts that match this policy."
+"(List of String) A list of mute timing names to apply to alerts that match this policy.\nA list of mute timing names to apply to alerts that match this policy."
 
 **Note:** This function appends passed data to existing values
 
@@ -1042,11 +842,11 @@ withMuteTimingsMixin(muteTimings)
 withRepeatInterval(repeatInterval)
 ```
 
-"Minimum time interval for re-sending a notification if an alert is still firing."
+"sending a notification if an alert is still firing.\nMinimum time interval for re-sending a notification if an alert is still firing."
 
 ## obj spec.initProvider.spec.trigger
 
-"The trigger configuration for the alert rule."
+"(Block, Optional) The trigger configuration for the alert rule. (see below for nested schema)\nThe trigger configuration for the alert rule."
 
 ### fn spec.initProvider.spec.trigger.withInterval
 
@@ -1054,7 +854,7 @@ withRepeatInterval(repeatInterval)
 withInterval(interval)
 ```
 
-"The interval at which the alert rule should be evaluated."
+"(String) The interval at which the alert rule should be evaluated.\nThe interval at which the alert rule should be evaluated."
 
 ## obj spec.providerConfigRef
 

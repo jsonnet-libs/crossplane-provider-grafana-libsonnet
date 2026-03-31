@@ -42,6 +42,18 @@ permalink: /crossplane-provider-grafana/cluster/sm/v1alpha1/checkAlerts/
       * [`fn withPeriod(period)`](#fn-specforprovideralertswithperiod)
       * [`fn withRunbookUrl(runbookUrl)`](#fn-specforprovideralertswithrunbookurl)
       * [`fn withThreshold(threshold)`](#fn-specforprovideralertswiththreshold)
+    * [`obj spec.forProvider.checkRef`](#obj-specforprovidercheckref)
+      * [`fn withName(name)`](#fn-specforprovidercheckrefwithname)
+      * [`obj spec.forProvider.checkRef.policy`](#obj-specforprovidercheckrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforprovidercheckrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforprovidercheckrefpolicywithresolve)
+    * [`obj spec.forProvider.checkSelector`](#obj-specforprovidercheckselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidercheckselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidercheckselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidercheckselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.checkSelector.policy`](#obj-specforprovidercheckselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforprovidercheckselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforprovidercheckselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
     * [`fn withAlerts(alerts)`](#fn-specinitproviderwithalerts)
     * [`fn withAlertsMixin(alerts)`](#fn-specinitproviderwithalertsmixin)
@@ -51,6 +63,18 @@ permalink: /crossplane-provider-grafana/cluster/sm/v1alpha1/checkAlerts/
       * [`fn withPeriod(period)`](#fn-specinitprovideralertswithperiod)
       * [`fn withRunbookUrl(runbookUrl)`](#fn-specinitprovideralertswithrunbookurl)
       * [`fn withThreshold(threshold)`](#fn-specinitprovideralertswiththreshold)
+    * [`obj spec.initProvider.checkRef`](#obj-specinitprovidercheckref)
+      * [`fn withName(name)`](#fn-specinitprovidercheckrefwithname)
+      * [`obj spec.initProvider.checkRef.policy`](#obj-specinitprovidercheckrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitprovidercheckrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitprovidercheckrefpolicywithresolve)
+    * [`obj spec.initProvider.checkSelector`](#obj-specinitprovidercheckselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitprovidercheckselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitprovidercheckselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitprovidercheckselectorwithmatchlabelsmixin)
+      * [`obj spec.initProvider.checkSelector.policy`](#obj-specinitprovidercheckselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitprovidercheckselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitprovidercheckselectorpolicywithresolve)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -330,6 +354,88 @@ withThreshold(threshold)
 
 "(Number)"
 
+## obj spec.forProvider.checkRef
+
+"Reference to a Check in sm to populate checkId."
+
+### fn spec.forProvider.checkRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.checkRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.checkRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.checkRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.checkSelector
+
+"Selector for a Check in sm to populate checkId."
+
+### fn spec.forProvider.checkSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.checkSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.checkSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.checkSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.checkSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.checkSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
@@ -395,6 +501,88 @@ withThreshold(threshold)
 ```
 
 "(Number)"
+
+## obj spec.initProvider.checkRef
+
+"Reference to a Check in sm to populate checkId."
+
+### fn spec.initProvider.checkRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.initProvider.checkRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.checkRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.checkRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.checkSelector
+
+"Selector for a Check in sm to populate checkId."
+
+### fn spec.initProvider.checkSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.checkSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.checkSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.initProvider.checkSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.checkSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.checkSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.providerConfigRef
 

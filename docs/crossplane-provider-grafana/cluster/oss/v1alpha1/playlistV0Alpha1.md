@@ -34,12 +34,6 @@ permalink: /crossplane-provider-grafana/cluster/oss/v1alpha1/playlistV0Alpha1/
   * [`fn withManagementPolicies(managementPolicies)`](#fn-specwithmanagementpolicies)
   * [`fn withManagementPoliciesMixin(managementPolicies)`](#fn-specwithmanagementpoliciesmixin)
   * [`obj spec.forProvider`](#obj-specforprovider)
-    * [`fn withMetadata(metadata)`](#fn-specforproviderwithmetadata)
-    * [`fn withMetadataMixin(metadata)`](#fn-specforproviderwithmetadatamixin)
-    * [`fn withOptions(options)`](#fn-specforproviderwithoptions)
-    * [`fn withOptionsMixin(options)`](#fn-specforproviderwithoptionsmixin)
-    * [`fn withSpec(spec)`](#fn-specforproviderwithspec)
-    * [`fn withSpecMixin(spec)`](#fn-specforproviderwithspecmixin)
     * [`obj spec.forProvider.metadata`](#obj-specforprovidermetadata)
       * [`fn withFolderUid(folderUid)`](#fn-specforprovidermetadatawithfolderuid)
       * [`fn withUid(uid)`](#fn-specforprovidermetadatawithuid)
@@ -54,12 +48,6 @@ permalink: /crossplane-provider-grafana/cluster/oss/v1alpha1/playlistV0Alpha1/
         * [`fn withType(type)`](#fn-specforproviderspecitemswithtype)
         * [`fn withValue(value)`](#fn-specforproviderspecitemswithvalue)
   * [`obj spec.initProvider`](#obj-specinitprovider)
-    * [`fn withMetadata(metadata)`](#fn-specinitproviderwithmetadata)
-    * [`fn withMetadataMixin(metadata)`](#fn-specinitproviderwithmetadatamixin)
-    * [`fn withOptions(options)`](#fn-specinitproviderwithoptions)
-    * [`fn withOptionsMixin(options)`](#fn-specinitproviderwithoptionsmixin)
-    * [`fn withSpec(spec)`](#fn-specinitproviderwithspec)
-    * [`fn withSpecMixin(spec)`](#fn-specinitproviderwithspecmixin)
     * [`obj spec.initProvider.metadata`](#obj-specinitprovidermetadata)
       * [`fn withFolderUid(folderUid)`](#fn-specinitprovidermetadatawithfolderuid)
       * [`fn withUid(uid)`](#fn-specinitprovidermetadatawithuid)
@@ -290,60 +278,6 @@ withManagementPoliciesMixin(managementPolicies)
 
 
 
-### fn spec.forProvider.withMetadata
-
-```ts
-withMetadata(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-### fn spec.forProvider.withMetadataMixin
-
-```ts
-withMetadataMixin(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withOptions
-
-```ts
-withOptions(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-### fn spec.forProvider.withOptionsMixin
-
-```ts
-withOptionsMixin(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.forProvider.withSpec
-
-```ts
-withSpec(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-### fn spec.forProvider.withSpecMixin
-
-```ts
-withSpecMixin(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-**Note:** This function appends passed data to existing values
-
 ## obj spec.forProvider.metadata
 
 "(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
@@ -437,60 +371,6 @@ withValue(value)
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
-
-### fn spec.initProvider.withMetadata
-
-```ts
-withMetadata(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-### fn spec.initProvider.withMetadataMixin
-
-```ts
-withMetadataMixin(metadata)
-```
-
-"(Block, Optional) The metadata of the resource. (see below for nested schema)\nThe metadata of the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.initProvider.withOptions
-
-```ts
-withOptions(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-### fn spec.initProvider.withOptionsMixin
-
-```ts
-withOptionsMixin(options)
-```
-
-"(Block, Optional) Options for applying the resource. (see below for nested schema)\nOptions for applying the resource."
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.initProvider.withSpec
-
-```ts
-withSpec(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-### fn spec.initProvider.withSpecMixin
-
-```ts
-withSpecMixin(spec)
-```
-
-"(Block, Optional) The spec of the resource. (see below for nested schema)\nThe spec of the resource."
-
-**Note:** This function appends passed data to existing values
 
 ## obj spec.initProvider.metadata
 

@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/cluster/cloudprovider/v1alpha1/awsCloudw
 
 # cloudprovider.v1alpha1.awsCloudwatchScrapeJob
 
-"AwsCloudwatchScrapeJob is the Schema for the AwsCloudwatchScrapeJobs API."
+"AwsCloudwatchScrapeJob is the Schema for the AwsCloudwatchScrapeJobs API. This resource allows you to scrape AWS CloudWatch metrics in Grafana Cloud without needing to run your own infrastructure. See the Grafana Provider configuration docs https://registry.io/providers/grafana/grafana/latest/docs#managing-cloud-provider for information on authentication and required access policy scopes. Official Grafana Cloud documentation https://grafana.com/docs/grafana-cloud/monitor-infrastructure/monitor-cloud-provider/aws/"
 
 ## Index
 

@@ -1,0 +1,18 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1alpha1', url='', help=''),
+  dashboard: (import 'dashboard.libsonnet'),
+  dashboardSet: (import 'dashboardSet.libsonnet'),
+  dataSource: (import 'dataSource.libsonnet'),
+  folder: (import 'folder.libsonnet'),
+  folderSet: (import 'folderSet.libsonnet'),
+  libraryPanel: (import 'libraryPanel.libsonnet'),
+  libraryPanelSet: (import 'libraryPanelSet.libsonnet'),
+  organization: (import 'organization.libsonnet'),
+  organizationPreferences: (import 'organizationPreferences.libsonnet'),
+  organizationUser: (import 'organizationUser.libsonnet'),
+  serviceAccount: (import 'serviceAccount.libsonnet'),
+  team: (import 'team.libsonnet'),
+  user: (import 'user.libsonnet'),
+  userSet: (import 'userSet.libsonnet'),
+}

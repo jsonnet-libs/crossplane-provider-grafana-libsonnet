@@ -1,0 +1,15 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='grafana', url='github.com/jsonnet-libs/crossplane-provider-grafana-libsonnet/crossplane-provider-grafana/observe/main.libsonnet', help=''),
+  cloud:: (import '_gen/cloud/main.libsonnet'),
+  cloudprovider:: (import '_gen/cloudprovider/main.libsonnet'),
+  connections:: (import '_gen/connections/main.libsonnet'),
+  enterprise:: (import '_gen/enterprise/main.libsonnet'),
+  fleetmanagement:: (import '_gen/fleetmanagement/main.libsonnet'),
+  frontendobservability:: (import '_gen/frontendobservability/main.libsonnet'),
+  k6:: (import '_gen/k6/main.libsonnet'),
+  oncall:: (import '_gen/oncall/main.libsonnet'),
+  oss:: (import '_gen/oss/main.libsonnet'),
+  slo:: (import '_gen/slo/main.libsonnet'),
+  sm:: (import '_gen/sm/main.libsonnet'),
+}

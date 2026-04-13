@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='dashboard', url='', help='"Dashboard is the Schema for the Dashboards API. Manages Grafana dashboards. Official documentation https://grafana.com/docs/grafana/latest/dashboards/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/dashboard/"'),
+  '#':: d.pkg(name='dashboard', url='', help='"Dashboard is the Schema for the Dashboards API. Manages Grafana dashboards. Official documentation https://grafana.com/docs/grafana/latest/dashboards/HTTP API (legacy API, recommended for Grafana 12 or earlier) https://grafana.com/docs/grafana/v11.6/developers/http_api/dashboard/HTTP API (new Kubernetes-style API, recommended for Grafana 13 and later) https://grafana.com/docs/grafana/latest/developers/http_api/dashboard/"'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),
@@ -109,7 +109,7 @@
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
         withMatchLabelsMixin(matchLabels): { spec+: { forProvider+: { organizationSelector+: { matchLabels+: matchLabels } } } },
       },
-      '#withConfigJson':: d.fn(help='"(String) The complete dashboard model JSON.\\nThe complete dashboard model JSON."', args=[d.arg(name='configJson', type=d.T.string)]),
+      '#withConfigJson':: d.fn(help="\"(String) The complete dashboard model JSON.\\nThe complete dashboard model JSON.\\n\\nStarting with Grafana v13, use the resource corresponding to your dashboard's API version for Kubernetes-style dashboards.\\n\\nIf you decide to use this legacy resource with a Kubernetes-style dashboard definition:\\n- In Grafana v12, provide the \\\"spec\\\" field of the dashboard definition.\\n- In Grafana v13 and later, provide the full Kubernetes-style dashboard JSON (including \\\"apiVersion\\\", \\\"kind\\\", \\\"metadata\\\", and \\\"spec\\\").\"", args=[d.arg(name='configJson', type=d.T.string)]),
       withConfigJson(configJson): { spec+: { forProvider+: { configJson: configJson } } },
       '#withFolder':: d.fn(help='"(String) The id or UID of the folder to save the dashboard in.\\nThe id or UID of the folder to save the dashboard in."', args=[d.arg(name='folder', type=d.T.string)]),
       withFolder(folder): { spec+: { forProvider+: { folder: folder } } },
@@ -178,7 +178,7 @@
         '#withMatchLabelsMixin':: d.fn(help='"MatchLabels ensures an object with matching labels is selected."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
         withMatchLabelsMixin(matchLabels): { spec+: { initProvider+: { organizationSelector+: { matchLabels+: matchLabels } } } },
       },
-      '#withConfigJson':: d.fn(help='"(String) The complete dashboard model JSON.\\nThe complete dashboard model JSON."', args=[d.arg(name='configJson', type=d.T.string)]),
+      '#withConfigJson':: d.fn(help="\"(String) The complete dashboard model JSON.\\nThe complete dashboard model JSON.\\n\\nStarting with Grafana v13, use the resource corresponding to your dashboard's API version for Kubernetes-style dashboards.\\n\\nIf you decide to use this legacy resource with a Kubernetes-style dashboard definition:\\n- In Grafana v12, provide the \\\"spec\\\" field of the dashboard definition.\\n- In Grafana v13 and later, provide the full Kubernetes-style dashboard JSON (including \\\"apiVersion\\\", \\\"kind\\\", \\\"metadata\\\", and \\\"spec\\\").\"", args=[d.arg(name='configJson', type=d.T.string)]),
       withConfigJson(configJson): { spec+: { initProvider+: { configJson: configJson } } },
       '#withFolder':: d.fn(help='"(String) The id or UID of the folder to save the dashboard in.\\nThe id or UID of the folder to save the dashboard in."', args=[d.arg(name='folder', type=d.T.string)]),
       withFolder(folder): { spec+: { initProvider+: { folder: folder } } },

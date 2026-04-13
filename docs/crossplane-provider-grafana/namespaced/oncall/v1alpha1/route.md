@@ -78,6 +78,20 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/route/
     * [`obj spec.forProvider.slack`](#obj-specforproviderslack)
       * [`fn withChannelId(channelId)`](#fn-specforproviderslackwithchannelid)
       * [`fn withEnabled(enabled)`](#fn-specforproviderslackwithenabled)
+      * [`obj spec.forProvider.slack.slackChannelRef`](#obj-specforproviderslackslackchannelref)
+        * [`fn withName(name)`](#fn-specforproviderslackslackchannelrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderslackslackchannelrefwithnamespace)
+        * [`obj spec.forProvider.slack.slackChannelRef.policy`](#obj-specforproviderslackslackchannelrefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforproviderslackslackchannelrefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforproviderslackslackchannelrefpolicywithresolve)
+      * [`obj spec.forProvider.slack.slackChannelSelector`](#obj-specforproviderslackslackchannelselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderslackslackchannelselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderslackslackchannelselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderslackslackchannelselectorwithmatchlabelsmixin)
+        * [`fn withNamespace(namespace)`](#fn-specforproviderslackslackchannelselectorwithnamespace)
+        * [`obj spec.forProvider.slack.slackChannelSelector.policy`](#obj-specforproviderslackslackchannelselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforproviderslackslackchannelselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforproviderslackslackchannelselectorpolicywithresolve)
     * [`obj spec.forProvider.telegram`](#obj-specforprovidertelegram)
       * [`fn withEnabled(enabled)`](#fn-specforprovidertelegramwithenabled)
       * [`fn withId(id)`](#fn-specforprovidertelegramwithid)
@@ -127,6 +141,20 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/route/
     * [`obj spec.initProvider.slack`](#obj-specinitproviderslack)
       * [`fn withChannelId(channelId)`](#fn-specinitproviderslackwithchannelid)
       * [`fn withEnabled(enabled)`](#fn-specinitproviderslackwithenabled)
+      * [`obj spec.initProvider.slack.slackChannelRef`](#obj-specinitproviderslackslackchannelref)
+        * [`fn withName(name)`](#fn-specinitproviderslackslackchannelrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specinitproviderslackslackchannelrefwithnamespace)
+        * [`obj spec.initProvider.slack.slackChannelRef.policy`](#obj-specinitproviderslackslackchannelrefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitproviderslackslackchannelrefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitproviderslackslackchannelrefpolicywithresolve)
+      * [`obj spec.initProvider.slack.slackChannelSelector`](#obj-specinitproviderslackslackchannelselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderslackslackchannelselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderslackslackchannelselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderslackslackchannelselectorwithmatchlabelsmixin)
+        * [`fn withNamespace(namespace)`](#fn-specinitproviderslackslackchannelselectorwithnamespace)
+        * [`obj spec.initProvider.slack.slackChannelSelector.policy`](#obj-specinitproviderslackslackchannelselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitproviderslackslackchannelselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitproviderslackslackchannelselectorpolicywithresolve)
     * [`obj spec.initProvider.telegram`](#obj-specinitprovidertelegram)
       * [`fn withEnabled(enabled)`](#fn-specinitprovidertelegramwithenabled)
       * [`fn withId(id)`](#fn-specinitprovidertelegramwithid)
@@ -666,6 +694,104 @@ withEnabled(enabled)
 
 "(Boolean) Enable notification in MS teams. Defaults to true.\nEnable notification in Slack. Defaults to `true`."
 
+## obj spec.forProvider.slack.slackChannelRef
+
+"Reference to a SlackChannel in oncall to populate channelId."
+
+### fn spec.forProvider.slack.slackChannelRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.slack.slackChannelRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.slack.slackChannelRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.slack.slackChannelRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.slack.slackChannelRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.slack.slackChannelSelector
+
+"Selector for a SlackChannel in oncall to populate channelId."
+
+### fn spec.forProvider.slack.slackChannelSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.slack.slackChannelSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.slack.slackChannelSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.slack.slackChannelSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.slack.slackChannelSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.slack.slackChannelSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.slack.slackChannelSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.forProvider.telegram
 
 "specific settings for a route. (see below for nested schema)\nTelegram-specific settings for a route."
@@ -1019,6 +1145,104 @@ withEnabled(enabled)
 ```
 
 "(Boolean) Enable notification in MS teams. Defaults to true.\nEnable notification in Slack. Defaults to `true`."
+
+## obj spec.initProvider.slack.slackChannelRef
+
+"Reference to a SlackChannel in oncall to populate channelId."
+
+### fn spec.initProvider.slack.slackChannelRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.slack.slackChannelRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.slack.slackChannelRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.slack.slackChannelRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.slack.slackChannelRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.slack.slackChannelSelector
+
+"Selector for a SlackChannel in oncall to populate channelId."
+
+### fn spec.initProvider.slack.slackChannelSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.slack.slackChannelSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.slack.slackChannelSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.slack.slackChannelSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.slack.slackChannelSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.slack.slackChannelSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.slack.slackChannelSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.initProvider.telegram
 

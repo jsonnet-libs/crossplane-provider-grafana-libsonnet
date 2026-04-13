@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/cluster/oss/v1alpha1/playlist/
 
 # oss.v1alpha1.playlist
 
-"Playlist is the Schema for the Playlists API. Official documentation https://grafana.com/docs/grafana/latest/dashboards/create-manage-playlists/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/playlist/"
+"Playlist is the Schema for the Playlists API. Manages Grafana playlists. Official documentation https://grafana.com/docs/grafana/latest/dashboards/create-manage-playlists/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/playlist/"
 
 ## Index
 
@@ -308,7 +308,7 @@ withInterval(interval)
 withItem(item)
 ```
 
-"(Block Set, Min: 1) (see below for nested schema)"
+"(Block Set) (see below for nested schema)"
 
 ### fn spec.forProvider.withItemMixin
 
@@ -316,7 +316,7 @@ withItem(item)
 withItemMixin(item)
 ```
 
-"(Block Set, Min: 1) (see below for nested schema)"
+"(Block Set) (see below for nested schema)"
 
 **Note:** This function appends passed data to existing values
 
@@ -338,7 +338,7 @@ withOrgId(orgId)
 
 ## obj spec.forProvider.item
 
-"(Block Set, Min: 1) (see below for nested schema)"
+"(Block Set) (see below for nested schema)"
 
 ### fn spec.forProvider.item.withOrder
 
@@ -464,7 +464,7 @@ withInterval(interval)
 withItem(item)
 ```
 
-"(Block Set, Min: 1) (see below for nested schema)"
+"(Block Set) (see below for nested schema)"
 
 ### fn spec.initProvider.withItemMixin
 
@@ -472,7 +472,7 @@ withItem(item)
 withItemMixin(item)
 ```
 
-"(Block Set, Min: 1) (see below for nested schema)"
+"(Block Set) (see below for nested schema)"
 
 **Note:** This function appends passed data to existing values
 
@@ -494,7 +494,7 @@ withOrgId(orgId)
 
 ## obj spec.initProvider.item
 
-"(Block Set, Min: 1) (see below for nested schema)"
+"(Block Set) (see below for nested schema)"
 
 ### fn spec.initProvider.item.withOrder
 

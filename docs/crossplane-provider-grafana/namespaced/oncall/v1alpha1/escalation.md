@@ -48,6 +48,10 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalation/
     * [`fn withPersonsToNotifyMixin(personsToNotify)`](#fn-specforproviderwithpersonstonotifymixin)
     * [`fn withPersonsToNotifyNextEachTime(personsToNotifyNextEachTime)`](#fn-specforproviderwithpersonstonotifynexteachtime)
     * [`fn withPersonsToNotifyNextEachTimeMixin(personsToNotifyNextEachTime)`](#fn-specforproviderwithpersonstonotifynexteachtimemixin)
+    * [`fn withPersonsToNotifyNextEachTimeRef(personsToNotifyNextEachTimeRef)`](#fn-specforproviderwithpersonstonotifynexteachtimeref)
+    * [`fn withPersonsToNotifyNextEachTimeRefMixin(personsToNotifyNextEachTimeRef)`](#fn-specforproviderwithpersonstonotifynexteachtimerefmixin)
+    * [`fn withPersonsToNotifyRef(personsToNotifyRef)`](#fn-specforproviderwithpersonstonotifyref)
+    * [`fn withPersonsToNotifyRefMixin(personsToNotifyRef)`](#fn-specforproviderwithpersonstonotifyrefmixin)
     * [`fn withPosition(position)`](#fn-specforproviderwithposition)
     * [`fn withSeverity(severity)`](#fn-specforproviderwithseverity)
     * [`fn withType(type)`](#fn-specforproviderwithtype)
@@ -79,6 +83,20 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalation/
       * [`obj spec.forProvider.escalationChainSelector.policy`](#obj-specforproviderescalationchainselectorpolicy)
         * [`fn withResolution(resolution)`](#fn-specforproviderescalationchainselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specforproviderescalationchainselectorpolicywithresolve)
+    * [`obj spec.forProvider.groupToNotifyRef`](#obj-specforprovidergrouptonotifyref)
+      * [`fn withName(name)`](#fn-specforprovidergrouptonotifyrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforprovidergrouptonotifyrefwithnamespace)
+      * [`obj spec.forProvider.groupToNotifyRef.policy`](#obj-specforprovidergrouptonotifyrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforprovidergrouptonotifyrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforprovidergrouptonotifyrefpolicywithresolve)
+    * [`obj spec.forProvider.groupToNotifySelector`](#obj-specforprovidergrouptonotifyselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforprovidergrouptonotifyselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforprovidergrouptonotifyselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforprovidergrouptonotifyselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforprovidergrouptonotifyselectorwithnamespace)
+      * [`obj spec.forProvider.groupToNotifySelector.policy`](#obj-specforprovidergrouptonotifyselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforprovidergrouptonotifyselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforprovidergrouptonotifyselectorpolicywithresolve)
     * [`obj spec.forProvider.notifyOnCallFromScheduleRef`](#obj-specforprovidernotifyoncallfromscheduleref)
       * [`fn withName(name)`](#fn-specforprovidernotifyoncallfromschedulerefwithname)
       * [`fn withNamespace(namespace)`](#fn-specforprovidernotifyoncallfromschedulerefwithnamespace)
@@ -93,6 +111,48 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalation/
       * [`obj spec.forProvider.notifyOnCallFromScheduleSelector.policy`](#obj-specforprovidernotifyoncallfromscheduleselectorpolicy)
         * [`fn withResolution(resolution)`](#fn-specforprovidernotifyoncallfromscheduleselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specforprovidernotifyoncallfromscheduleselectorpolicywithresolve)
+    * [`obj spec.forProvider.personsToNotifyNextEachTimeRef`](#obj-specforproviderpersonstonotifynexteachtimeref)
+      * [`fn withName(name)`](#fn-specforproviderpersonstonotifynexteachtimerefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderpersonstonotifynexteachtimerefwithnamespace)
+      * [`obj spec.forProvider.personsToNotifyNextEachTimeRef.policy`](#obj-specforproviderpersonstonotifynexteachtimerefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderpersonstonotifynexteachtimerefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderpersonstonotifynexteachtimerefpolicywithresolve)
+    * [`obj spec.forProvider.personsToNotifyNextEachTimeSelector`](#obj-specforproviderpersonstonotifynexteachtimeselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpersonstonotifynexteachtimeselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpersonstonotifynexteachtimeselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpersonstonotifynexteachtimeselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderpersonstonotifynexteachtimeselectorwithnamespace)
+      * [`obj spec.forProvider.personsToNotifyNextEachTimeSelector.policy`](#obj-specforproviderpersonstonotifynexteachtimeselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderpersonstonotifynexteachtimeselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderpersonstonotifynexteachtimeselectorpolicywithresolve)
+    * [`obj spec.forProvider.personsToNotifyRef`](#obj-specforproviderpersonstonotifyref)
+      * [`fn withName(name)`](#fn-specforproviderpersonstonotifyrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderpersonstonotifyrefwithnamespace)
+      * [`obj spec.forProvider.personsToNotifyRef.policy`](#obj-specforproviderpersonstonotifyrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderpersonstonotifyrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderpersonstonotifyrefpolicywithresolve)
+    * [`obj spec.forProvider.personsToNotifySelector`](#obj-specforproviderpersonstonotifyselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderpersonstonotifyselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderpersonstonotifyselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderpersonstonotifyselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderpersonstonotifyselectorwithnamespace)
+      * [`obj spec.forProvider.personsToNotifySelector.policy`](#obj-specforproviderpersonstonotifyselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderpersonstonotifyselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderpersonstonotifyselectorpolicywithresolve)
+    * [`obj spec.forProvider.teamRef`](#obj-specforproviderteamref)
+      * [`fn withName(name)`](#fn-specforproviderteamrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderteamrefwithnamespace)
+      * [`obj spec.forProvider.teamRef.policy`](#obj-specforproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamrefpolicywithresolve)
+    * [`obj spec.forProvider.teamSelector`](#obj-specforproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderteamselectorwithnamespace)
+      * [`obj spec.forProvider.teamSelector.policy`](#obj-specforproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
     * [`fn withActionToTrigger(actionToTrigger)`](#fn-specinitproviderwithactiontotrigger)
     * [`fn withDuration(duration)`](#fn-specinitproviderwithduration)
@@ -109,6 +169,10 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalation/
     * [`fn withPersonsToNotifyMixin(personsToNotify)`](#fn-specinitproviderwithpersonstonotifymixin)
     * [`fn withPersonsToNotifyNextEachTime(personsToNotifyNextEachTime)`](#fn-specinitproviderwithpersonstonotifynexteachtime)
     * [`fn withPersonsToNotifyNextEachTimeMixin(personsToNotifyNextEachTime)`](#fn-specinitproviderwithpersonstonotifynexteachtimemixin)
+    * [`fn withPersonsToNotifyNextEachTimeRef(personsToNotifyNextEachTimeRef)`](#fn-specinitproviderwithpersonstonotifynexteachtimeref)
+    * [`fn withPersonsToNotifyNextEachTimeRefMixin(personsToNotifyNextEachTimeRef)`](#fn-specinitproviderwithpersonstonotifynexteachtimerefmixin)
+    * [`fn withPersonsToNotifyRef(personsToNotifyRef)`](#fn-specinitproviderwithpersonstonotifyref)
+    * [`fn withPersonsToNotifyRefMixin(personsToNotifyRef)`](#fn-specinitproviderwithpersonstonotifyrefmixin)
     * [`fn withPosition(position)`](#fn-specinitproviderwithposition)
     * [`fn withSeverity(severity)`](#fn-specinitproviderwithseverity)
     * [`fn withType(type)`](#fn-specinitproviderwithtype)
@@ -140,6 +204,20 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalation/
       * [`obj spec.initProvider.escalationChainSelector.policy`](#obj-specinitproviderescalationchainselectorpolicy)
         * [`fn withResolution(resolution)`](#fn-specinitproviderescalationchainselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specinitproviderescalationchainselectorpolicywithresolve)
+    * [`obj spec.initProvider.groupToNotifyRef`](#obj-specinitprovidergrouptonotifyref)
+      * [`fn withName(name)`](#fn-specinitprovidergrouptonotifyrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitprovidergrouptonotifyrefwithnamespace)
+      * [`obj spec.initProvider.groupToNotifyRef.policy`](#obj-specinitprovidergrouptonotifyrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitprovidergrouptonotifyrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitprovidergrouptonotifyrefpolicywithresolve)
+    * [`obj spec.initProvider.groupToNotifySelector`](#obj-specinitprovidergrouptonotifyselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitprovidergrouptonotifyselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitprovidergrouptonotifyselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitprovidergrouptonotifyselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitprovidergrouptonotifyselectorwithnamespace)
+      * [`obj spec.initProvider.groupToNotifySelector.policy`](#obj-specinitprovidergrouptonotifyselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitprovidergrouptonotifyselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitprovidergrouptonotifyselectorpolicywithresolve)
     * [`obj spec.initProvider.notifyOnCallFromScheduleRef`](#obj-specinitprovidernotifyoncallfromscheduleref)
       * [`fn withName(name)`](#fn-specinitprovidernotifyoncallfromschedulerefwithname)
       * [`fn withNamespace(namespace)`](#fn-specinitprovidernotifyoncallfromschedulerefwithnamespace)
@@ -154,6 +232,48 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalation/
       * [`obj spec.initProvider.notifyOnCallFromScheduleSelector.policy`](#obj-specinitprovidernotifyoncallfromscheduleselectorpolicy)
         * [`fn withResolution(resolution)`](#fn-specinitprovidernotifyoncallfromscheduleselectorpolicywithresolution)
         * [`fn withResolve(resolve)`](#fn-specinitprovidernotifyoncallfromscheduleselectorpolicywithresolve)
+    * [`obj spec.initProvider.personsToNotifyNextEachTimeRef`](#obj-specinitproviderpersonstonotifynexteachtimeref)
+      * [`fn withName(name)`](#fn-specinitproviderpersonstonotifynexteachtimerefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderpersonstonotifynexteachtimerefwithnamespace)
+      * [`obj spec.initProvider.personsToNotifyNextEachTimeRef.policy`](#obj-specinitproviderpersonstonotifynexteachtimerefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderpersonstonotifynexteachtimerefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderpersonstonotifynexteachtimerefpolicywithresolve)
+    * [`obj spec.initProvider.personsToNotifyNextEachTimeSelector`](#obj-specinitproviderpersonstonotifynexteachtimeselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderpersonstonotifynexteachtimeselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderpersonstonotifynexteachtimeselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderpersonstonotifynexteachtimeselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderpersonstonotifynexteachtimeselectorwithnamespace)
+      * [`obj spec.initProvider.personsToNotifyNextEachTimeSelector.policy`](#obj-specinitproviderpersonstonotifynexteachtimeselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderpersonstonotifynexteachtimeselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderpersonstonotifynexteachtimeselectorpolicywithresolve)
+    * [`obj spec.initProvider.personsToNotifyRef`](#obj-specinitproviderpersonstonotifyref)
+      * [`fn withName(name)`](#fn-specinitproviderpersonstonotifyrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderpersonstonotifyrefwithnamespace)
+      * [`obj spec.initProvider.personsToNotifyRef.policy`](#obj-specinitproviderpersonstonotifyrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderpersonstonotifyrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderpersonstonotifyrefpolicywithresolve)
+    * [`obj spec.initProvider.personsToNotifySelector`](#obj-specinitproviderpersonstonotifyselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderpersonstonotifyselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderpersonstonotifyselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderpersonstonotifyselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderpersonstonotifyselectorwithnamespace)
+      * [`obj spec.initProvider.personsToNotifySelector.policy`](#obj-specinitproviderpersonstonotifyselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderpersonstonotifyselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderpersonstonotifyselectorpolicywithresolve)
+    * [`obj spec.initProvider.teamRef`](#obj-specinitproviderteamref)
+      * [`fn withName(name)`](#fn-specinitproviderteamrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderteamrefwithnamespace)
+      * [`obj spec.initProvider.teamRef.policy`](#obj-specinitproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamrefpolicywithresolve)
+    * [`obj spec.initProvider.teamSelector`](#obj-specinitproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderteamselectorwithnamespace)
+      * [`obj spec.initProvider.teamSelector.policy`](#obj-specinitproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamselectorpolicywithresolve)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withKind(kind)`](#fn-specproviderconfigrefwithkind)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
@@ -398,7 +518,7 @@ withGroupToNotify(groupToNotify)
 withImportant(important)
 ```
 
-"(Boolean) Will activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_user_group and notify_team_members\nWill activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_user_group and notify_team_members"
+"(Boolean) Will activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, notify_user_group and notify_team_members\nWill activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, notify_user_group and notify_team_members"
 
 ### fn spec.forProvider.withNotifyIfTimeFrom
 
@@ -422,7 +542,7 @@ withNotifyIfTimeTo(notifyIfTimeTo)
 withNotifyOnCallFromSchedule(notifyOnCallFromSchedule)
 ```
 
-"(String) ID of a Schedule for notify_on_call_from_schedule type step.\nID of a Schedule for notify_on_call_from_schedule type step."
+"(String) ID of a Schedule for notify_on_call_from_schedule or notify_next_on_call_from_schedule type step.\nID of a Schedule for notify_on_call_from_schedule or notify_next_on_call_from_schedule type step."
 
 ### fn spec.forProvider.withNotifyToTeamMembers
 
@@ -484,6 +604,42 @@ withPersonsToNotifyNextEachTimeMixin(personsToNotifyNextEachTime)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.forProvider.withPersonsToNotifyNextEachTimeRef
+
+```ts
+withPersonsToNotifyNextEachTimeRef(personsToNotifyNextEachTimeRef)
+```
+
+"References to User in oncall to populate personsToNotifyNextEachTime."
+
+### fn spec.forProvider.withPersonsToNotifyNextEachTimeRefMixin
+
+```ts
+withPersonsToNotifyNextEachTimeRefMixin(personsToNotifyNextEachTimeRef)
+```
+
+"References to User in oncall to populate personsToNotifyNextEachTime."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.withPersonsToNotifyRef
+
+```ts
+withPersonsToNotifyRef(personsToNotifyRef)
+```
+
+"References to User in oncall to populate personsToNotify."
+
+### fn spec.forProvider.withPersonsToNotifyRefMixin
+
+```ts
+withPersonsToNotifyRefMixin(personsToNotifyRef)
+```
+
+"References to User in oncall to populate personsToNotify."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.forProvider.withPosition
 
 ```ts
@@ -506,7 +662,7 @@ withSeverity(severity)
 withType(type)
 ```
 
-"(String) The type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident\nThe type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident"
+"(String) The type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident\nThe type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident"
 
 ## obj spec.forProvider.actionToTriggerRef
 
@@ -704,6 +860,104 @@ withResolve(resolve)
 
 "Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
+## obj spec.forProvider.groupToNotifyRef
+
+"Reference to a UserGroup in oncall to populate groupToNotify."
+
+### fn spec.forProvider.groupToNotifyRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.groupToNotifyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.groupToNotifyRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.groupToNotifyRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.groupToNotifyRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.groupToNotifySelector
+
+"Selector for a UserGroup in oncall to populate groupToNotify."
+
+### fn spec.forProvider.groupToNotifySelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.groupToNotifySelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.groupToNotifySelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.groupToNotifySelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.groupToNotifySelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.groupToNotifySelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.groupToNotifySelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.forProvider.notifyOnCallFromScheduleRef
 
 "Reference to a Schedule in oncall to populate notifyOnCallFromSchedule."
@@ -802,6 +1056,300 @@ withResolve(resolve)
 
 "Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
+## obj spec.forProvider.personsToNotifyNextEachTimeRef
+
+"References to User in oncall to populate personsToNotifyNextEachTime."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.personsToNotifyNextEachTimeRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.personsToNotifyNextEachTimeSelector
+
+"Selector for a list of User in oncall to populate personsToNotifyNextEachTime."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.personsToNotifyNextEachTimeSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.personsToNotifyNextEachTimeSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.personsToNotifyNextEachTimeSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.personsToNotifyRef
+
+"References to User in oncall to populate personsToNotify."
+
+### fn spec.forProvider.personsToNotifyRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.personsToNotifyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.personsToNotifyRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.personsToNotifyRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.personsToNotifyRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.personsToNotifySelector
+
+"Selector for a list of User in oncall to populate personsToNotify."
+
+### fn spec.forProvider.personsToNotifySelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.personsToNotifySelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.personsToNotifySelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.personsToNotifySelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.personsToNotifySelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.personsToNotifySelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.personsToNotifySelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamRef
+
+"Reference to a Team in oncall to populate notifyToTeamMembers."
+
+### fn spec.forProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.teamRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamSelector
+
+"Selector for a Team in oncall to populate notifyToTeamMembers."
+
+### fn spec.forProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.teamSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
@@ -844,7 +1392,7 @@ withGroupToNotify(groupToNotify)
 withImportant(important)
 ```
 
-"(Boolean) Will activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_user_group and notify_team_members\nWill activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_user_group and notify_team_members"
+"(Boolean) Will activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, notify_user_group and notify_team_members\nWill activate \"important\" personal notification rules. Actual for steps: notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, notify_user_group and notify_team_members"
 
 ### fn spec.initProvider.withNotifyIfTimeFrom
 
@@ -868,7 +1416,7 @@ withNotifyIfTimeTo(notifyIfTimeTo)
 withNotifyOnCallFromSchedule(notifyOnCallFromSchedule)
 ```
 
-"(String) ID of a Schedule for notify_on_call_from_schedule type step.\nID of a Schedule for notify_on_call_from_schedule type step."
+"(String) ID of a Schedule for notify_on_call_from_schedule or notify_next_on_call_from_schedule type step.\nID of a Schedule for notify_on_call_from_schedule or notify_next_on_call_from_schedule type step."
 
 ### fn spec.initProvider.withNotifyToTeamMembers
 
@@ -930,6 +1478,42 @@ withPersonsToNotifyNextEachTimeMixin(personsToNotifyNextEachTime)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.initProvider.withPersonsToNotifyNextEachTimeRef
+
+```ts
+withPersonsToNotifyNextEachTimeRef(personsToNotifyNextEachTimeRef)
+```
+
+"References to User in oncall to populate personsToNotifyNextEachTime."
+
+### fn spec.initProvider.withPersonsToNotifyNextEachTimeRefMixin
+
+```ts
+withPersonsToNotifyNextEachTimeRefMixin(personsToNotifyNextEachTimeRef)
+```
+
+"References to User in oncall to populate personsToNotifyNextEachTime."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.withPersonsToNotifyRef
+
+```ts
+withPersonsToNotifyRef(personsToNotifyRef)
+```
+
+"References to User in oncall to populate personsToNotify."
+
+### fn spec.initProvider.withPersonsToNotifyRefMixin
+
+```ts
+withPersonsToNotifyRefMixin(personsToNotifyRef)
+```
+
+"References to User in oncall to populate personsToNotify."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.initProvider.withPosition
 
 ```ts
@@ -952,7 +1536,7 @@ withSeverity(severity)
 withType(type)
 ```
 
-"(String) The type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident\nThe type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident"
+"(String) The type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident\nThe type of escalation policy. Can be wait, notify_persons, notify_person_next_each_time, notify_on_call_from_schedule, notify_next_on_call_from_schedule, trigger_webhook, notify_user_group, resolve, notify_whole_channel, notify_if_time_from_to, notify_if_num_alerts_in_window, repeat_escalation, notify_team_members, declare_incident"
 
 ## obj spec.initProvider.actionToTriggerRef
 
@@ -1150,6 +1734,104 @@ withResolve(resolve)
 
 "Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
+## obj spec.initProvider.groupToNotifyRef
+
+"Reference to a UserGroup in oncall to populate groupToNotify."
+
+### fn spec.initProvider.groupToNotifyRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.groupToNotifyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.groupToNotifyRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.groupToNotifyRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.groupToNotifyRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.groupToNotifySelector
+
+"Selector for a UserGroup in oncall to populate groupToNotify."
+
+### fn spec.initProvider.groupToNotifySelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.groupToNotifySelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.groupToNotifySelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.groupToNotifySelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.groupToNotifySelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.groupToNotifySelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.groupToNotifySelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.initProvider.notifyOnCallFromScheduleRef
 
 "Reference to a Schedule in oncall to populate notifyOnCallFromSchedule."
@@ -1241,6 +1923,300 @@ withResolution(resolution)
 "Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
 
 ### fn spec.initProvider.notifyOnCallFromScheduleSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.personsToNotifyNextEachTimeRef
+
+"References to User in oncall to populate personsToNotifyNextEachTime."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.personsToNotifyNextEachTimeRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.personsToNotifyNextEachTimeSelector
+
+"Selector for a list of User in oncall to populate personsToNotifyNextEachTime."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.personsToNotifyNextEachTimeSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.personsToNotifyNextEachTimeSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.personsToNotifyNextEachTimeSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.personsToNotifyRef
+
+"References to User in oncall to populate personsToNotify."
+
+### fn spec.initProvider.personsToNotifyRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.personsToNotifyRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.personsToNotifyRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.personsToNotifyRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.personsToNotifyRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.personsToNotifySelector
+
+"Selector for a list of User in oncall to populate personsToNotify."
+
+### fn spec.initProvider.personsToNotifySelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.personsToNotifySelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.personsToNotifySelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.personsToNotifySelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.personsToNotifySelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.personsToNotifySelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.personsToNotifySelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamRef
+
+"Reference to a Team in oncall to populate notifyToTeamMembers."
+
+### fn spec.initProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.teamRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamSelector
+
+"Selector for a Team in oncall to populate notifyToTeamMembers."
+
+### fn spec.initProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.teamSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamSelector.policy.withResolve
 
 ```ts
 withResolve(resolve)

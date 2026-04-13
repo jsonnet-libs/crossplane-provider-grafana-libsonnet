@@ -67,11 +67,15 @@ permalink: /crossplane-provider-grafana/namespaced/slo/v1alpha1/slo/
       * [`obj spec.forProvider.alerting.fastburn`](#obj-specforprovideralertingfastburn)
         * [`fn withAnnotation(annotation)`](#fn-specforprovideralertingfastburnwithannotation)
         * [`fn withAnnotationMixin(annotation)`](#fn-specforprovideralertingfastburnwithannotationmixin)
+        * [`fn withEnrichment(enrichment)`](#fn-specforprovideralertingfastburnwithenrichment)
+        * [`fn withEnrichmentMixin(enrichment)`](#fn-specforprovideralertingfastburnwithenrichmentmixin)
         * [`fn withLabel(label)`](#fn-specforprovideralertingfastburnwithlabel)
         * [`fn withLabelMixin(label)`](#fn-specforprovideralertingfastburnwithlabelmixin)
         * [`obj spec.forProvider.alerting.fastburn.annotation`](#obj-specforprovideralertingfastburnannotation)
           * [`fn withKey(key)`](#fn-specforprovideralertingfastburnannotationwithkey)
           * [`fn withValue(value)`](#fn-specforprovideralertingfastburnannotationwithvalue)
+        * [`obj spec.forProvider.alerting.fastburn.enrichment`](#obj-specforprovideralertingfastburnenrichment)
+          * [`fn withType(type)`](#fn-specforprovideralertingfastburnenrichmentwithtype)
         * [`obj spec.forProvider.alerting.fastburn.label`](#obj-specforprovideralertingfastburnlabel)
           * [`fn withKey(key)`](#fn-specforprovideralertingfastburnlabelwithkey)
           * [`fn withValue(value)`](#fn-specforprovideralertingfastburnlabelwithvalue)
@@ -81,11 +85,15 @@ permalink: /crossplane-provider-grafana/namespaced/slo/v1alpha1/slo/
       * [`obj spec.forProvider.alerting.slowburn`](#obj-specforprovideralertingslowburn)
         * [`fn withAnnotation(annotation)`](#fn-specforprovideralertingslowburnwithannotation)
         * [`fn withAnnotationMixin(annotation)`](#fn-specforprovideralertingslowburnwithannotationmixin)
+        * [`fn withEnrichment(enrichment)`](#fn-specforprovideralertingslowburnwithenrichment)
+        * [`fn withEnrichmentMixin(enrichment)`](#fn-specforprovideralertingslowburnwithenrichmentmixin)
         * [`fn withLabel(label)`](#fn-specforprovideralertingslowburnwithlabel)
         * [`fn withLabelMixin(label)`](#fn-specforprovideralertingslowburnwithlabelmixin)
         * [`obj spec.forProvider.alerting.slowburn.annotation`](#obj-specforprovideralertingslowburnannotation)
           * [`fn withKey(key)`](#fn-specforprovideralertingslowburnannotationwithkey)
           * [`fn withValue(value)`](#fn-specforprovideralertingslowburnannotationwithvalue)
+        * [`obj spec.forProvider.alerting.slowburn.enrichment`](#obj-specforprovideralertingslowburnenrichment)
+          * [`fn withType(type)`](#fn-specforprovideralertingslowburnenrichmentwithtype)
         * [`obj spec.forProvider.alerting.slowburn.label`](#obj-specforprovideralertingslowburnlabel)
           * [`fn withKey(key)`](#fn-specforprovideralertingslowburnlabelwithkey)
           * [`fn withValue(value)`](#fn-specforprovideralertingslowburnlabelwithvalue)
@@ -163,11 +171,15 @@ permalink: /crossplane-provider-grafana/namespaced/slo/v1alpha1/slo/
       * [`obj spec.initProvider.alerting.fastburn`](#obj-specinitprovideralertingfastburn)
         * [`fn withAnnotation(annotation)`](#fn-specinitprovideralertingfastburnwithannotation)
         * [`fn withAnnotationMixin(annotation)`](#fn-specinitprovideralertingfastburnwithannotationmixin)
+        * [`fn withEnrichment(enrichment)`](#fn-specinitprovideralertingfastburnwithenrichment)
+        * [`fn withEnrichmentMixin(enrichment)`](#fn-specinitprovideralertingfastburnwithenrichmentmixin)
         * [`fn withLabel(label)`](#fn-specinitprovideralertingfastburnwithlabel)
         * [`fn withLabelMixin(label)`](#fn-specinitprovideralertingfastburnwithlabelmixin)
         * [`obj spec.initProvider.alerting.fastburn.annotation`](#obj-specinitprovideralertingfastburnannotation)
           * [`fn withKey(key)`](#fn-specinitprovideralertingfastburnannotationwithkey)
           * [`fn withValue(value)`](#fn-specinitprovideralertingfastburnannotationwithvalue)
+        * [`obj spec.initProvider.alerting.fastburn.enrichment`](#obj-specinitprovideralertingfastburnenrichment)
+          * [`fn withType(type)`](#fn-specinitprovideralertingfastburnenrichmentwithtype)
         * [`obj spec.initProvider.alerting.fastburn.label`](#obj-specinitprovideralertingfastburnlabel)
           * [`fn withKey(key)`](#fn-specinitprovideralertingfastburnlabelwithkey)
           * [`fn withValue(value)`](#fn-specinitprovideralertingfastburnlabelwithvalue)
@@ -177,11 +189,15 @@ permalink: /crossplane-provider-grafana/namespaced/slo/v1alpha1/slo/
       * [`obj spec.initProvider.alerting.slowburn`](#obj-specinitprovideralertingslowburn)
         * [`fn withAnnotation(annotation)`](#fn-specinitprovideralertingslowburnwithannotation)
         * [`fn withAnnotationMixin(annotation)`](#fn-specinitprovideralertingslowburnwithannotationmixin)
+        * [`fn withEnrichment(enrichment)`](#fn-specinitprovideralertingslowburnwithenrichment)
+        * [`fn withEnrichmentMixin(enrichment)`](#fn-specinitprovideralertingslowburnwithenrichmentmixin)
         * [`fn withLabel(label)`](#fn-specinitprovideralertingslowburnwithlabel)
         * [`fn withLabelMixin(label)`](#fn-specinitprovideralertingslowburnwithlabelmixin)
         * [`obj spec.initProvider.alerting.slowburn.annotation`](#obj-specinitprovideralertingslowburnannotation)
           * [`fn withKey(key)`](#fn-specinitprovideralertingslowburnannotationwithkey)
           * [`fn withValue(value)`](#fn-specinitprovideralertingslowburnannotationwithvalue)
+        * [`obj spec.initProvider.alerting.slowburn.enrichment`](#obj-specinitprovideralertingslowburnenrichment)
+          * [`fn withType(type)`](#fn-specinitprovideralertingslowburnenrichmentwithtype)
         * [`obj spec.initProvider.alerting.slowburn.label`](#obj-specinitprovideralertingslowburnlabel)
           * [`fn withKey(key)`](#fn-specinitprovideralertingslowburnlabelwithkey)
           * [`fn withValue(value)`](#fn-specinitprovideralertingslowburnlabelwithvalue)
@@ -708,6 +724,24 @@ withAnnotationMixin(annotation)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.forProvider.alerting.fastburn.withEnrichment
+
+```ts
+withEnrichment(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Fast Burn alerts."
+
+### fn spec.forProvider.alerting.fastburn.withEnrichmentMixin
+
+```ts
+withEnrichmentMixin(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Fast Burn alerts."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.forProvider.alerting.fastburn.withLabel
 
 ```ts
@@ -745,6 +779,18 @@ withValue(value)
 ```
 
 "(Number) Value between 0 and 1. If the value of the query is above the objective, the SLO is met.\nTemplatable value"
+
+## obj spec.forProvider.alerting.fastburn.enrichment
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Fast Burn alerts."
+
+### fn spec.forProvider.alerting.fastburn.enrichment.withType
+
+```ts
+withType(type)
+```
+
+"(String) Query type must be one of: \"freeform\", \"query\", \"ratio\", \"grafana_queries\" or \"threshold\"\nType of the alert enrichment. Currently only \"assistantInvestigation\" is supported."
 
 ## obj spec.forProvider.alerting.fastburn.label
 
@@ -808,6 +854,24 @@ withAnnotationMixin(annotation)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.forProvider.alerting.slowburn.withEnrichment
+
+```ts
+withEnrichment(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Slow Burn alerts."
+
+### fn spec.forProvider.alerting.slowburn.withEnrichmentMixin
+
+```ts
+withEnrichmentMixin(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Slow Burn alerts."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.forProvider.alerting.slowburn.withLabel
 
 ```ts
@@ -845,6 +909,18 @@ withValue(value)
 ```
 
 "(Number) Value between 0 and 1. If the value of the query is above the objective, the SLO is met.\nTemplatable value"
+
+## obj spec.forProvider.alerting.slowburn.enrichment
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Slow Burn alerts."
+
+### fn spec.forProvider.alerting.slowburn.enrichment.withType
+
+```ts
+withType(type)
+```
+
+"(String) Query type must be one of: \"freeform\", \"query\", \"ratio\", \"grafana_queries\" or \"threshold\"\nType of the alert enrichment. Currently only \"assistantInvestigation\" is supported."
 
 ## obj spec.forProvider.alerting.slowburn.label
 
@@ -1426,6 +1502,24 @@ withAnnotationMixin(annotation)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.initProvider.alerting.fastburn.withEnrichment
+
+```ts
+withEnrichment(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Fast Burn alerts."
+
+### fn spec.initProvider.alerting.fastburn.withEnrichmentMixin
+
+```ts
+withEnrichmentMixin(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Fast Burn alerts."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.initProvider.alerting.fastburn.withLabel
 
 ```ts
@@ -1463,6 +1557,18 @@ withValue(value)
 ```
 
 "(Number) Value between 0 and 1. If the value of the query is above the objective, the SLO is met.\nTemplatable value"
+
+## obj spec.initProvider.alerting.fastburn.enrichment
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Fast Burn alerts."
+
+### fn spec.initProvider.alerting.fastburn.enrichment.withType
+
+```ts
+withType(type)
+```
+
+"(String) Query type must be one of: \"freeform\", \"query\", \"ratio\", \"grafana_queries\" or \"threshold\"\nType of the alert enrichment. Currently only \"assistantInvestigation\" is supported."
 
 ## obj spec.initProvider.alerting.fastburn.label
 
@@ -1526,6 +1632,24 @@ withAnnotationMixin(annotation)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.initProvider.alerting.slowburn.withEnrichment
+
+```ts
+withEnrichment(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Slow Burn alerts."
+
+### fn spec.initProvider.alerting.slowburn.withEnrichmentMixin
+
+```ts
+withEnrichmentMixin(enrichment)
+```
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Slow Burn alerts."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.initProvider.alerting.slowburn.withLabel
 
 ```ts
@@ -1563,6 +1687,18 @@ withValue(value)
 ```
 
 "(Number) Value between 0 and 1. If the value of the query is above the objective, the SLO is met.\nTemplatable value"
+
+## obj spec.initProvider.alerting.slowburn.enrichment
+
+"(Block List) Enrichments to attach only to Fast Burn alerts. (see below for nested schema)\nEnrichments to attach only to Slow Burn alerts."
+
+### fn spec.initProvider.alerting.slowburn.enrichment.withType
+
+```ts
+withType(type)
+```
+
+"(String) Query type must be one of: \"freeform\", \"query\", \"ratio\", \"grafana_queries\" or \"threshold\"\nType of the alert enrichment. Currently only \"assistantInvestigation\" is supported."
 
 ## obj spec.initProvider.alerting.slowburn.label
 

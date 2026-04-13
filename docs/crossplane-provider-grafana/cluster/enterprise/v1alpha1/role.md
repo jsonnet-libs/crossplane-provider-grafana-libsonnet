@@ -312,7 +312,7 @@ withManagementPoliciesMixin(managementPolicies)
 withAutoIncrementVersion(autoIncrementVersion)
 ```
 
-"(Boolean) Whether the role version should be incremented automatically on updates (and set to 1 on creation). This field or version should be set.\nWhether the role version should be incremented automatically on updates (and set to 1 on creation). This field or `version` should be set."
+"(Boolean) Whether the role version should be incremented automatically on updates (and set to 1 on creation). Recommended for most configurations. This field or version should be set.\nWhether the role version should be incremented automatically on updates (and set to 1 on creation). Recommended for most configurations. This field or `version` should be set."
 
 ### fn spec.forProvider.withDescription
 
@@ -402,7 +402,7 @@ withUid(uid)
 withVersion(version)
 ```
 
-"(Number) Version of the role. A role is updated only on version increase. This field or auto_increment_version should be set.\nVersion of the role. A role is updated only on version increase. This field or `auto_increment_version` should be set."
+"(Number) Version of the role. On create, must be 1. On update, must be exactly one greater than the previous state. This field or auto_increment_version should be set; auto_increment_version is recommended.\nVersion of the role. On create, must be `1`. On update, must be exactly one greater than the previous state. This field or `auto_increment_version` should be set; `auto_increment_version` is recommended."
 
 ## obj spec.forProvider.organizationRef
 
@@ -516,7 +516,7 @@ withScope(scope)
 withAutoIncrementVersion(autoIncrementVersion)
 ```
 
-"(Boolean) Whether the role version should be incremented automatically on updates (and set to 1 on creation). This field or version should be set.\nWhether the role version should be incremented automatically on updates (and set to 1 on creation). This field or `version` should be set."
+"(Boolean) Whether the role version should be incremented automatically on updates (and set to 1 on creation). Recommended for most configurations. This field or version should be set.\nWhether the role version should be incremented automatically on updates (and set to 1 on creation). Recommended for most configurations. This field or `version` should be set."
 
 ### fn spec.initProvider.withDescription
 
@@ -606,7 +606,7 @@ withUid(uid)
 withVersion(version)
 ```
 
-"(Number) Version of the role. A role is updated only on version increase. This field or auto_increment_version should be set.\nVersion of the role. A role is updated only on version increase. This field or `auto_increment_version` should be set."
+"(Number) Version of the role. On create, must be 1. On update, must be exactly one greater than the previous state. This field or auto_increment_version should be set; auto_increment_version is recommended.\nVersion of the role. On create, must be `1`. On update, must be exactly one greater than the previous state. This field or `auto_increment_version` should be set; `auto_increment_version` is recommended."
 
 ## obj spec.initProvider.organizationRef
 

@@ -306,7 +306,7 @@ withEnableUserSync(enableUserSync)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.forProvider.withRejectNonProvisionedUsers
 
@@ -424,7 +424,7 @@ withEnableUserSync(enableUserSync)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.initProvider.withRejectNonProvisionedUsers
 

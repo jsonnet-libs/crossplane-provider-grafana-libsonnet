@@ -49,6 +49,9 @@ permalink: /crossplane-provider-grafana/namespaced/grafana/v1beta1/providerConfi
       * [`fn withKey(key)`](#fn-speccredentialssecretrefwithkey)
       * [`fn withName(name)`](#fn-speccredentialssecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-speccredentialssecretrefwithnamespace)
+  * [`obj spec.stackSecretRef`](#obj-specstacksecretref)
+    * [`fn withName(name)`](#fn-specstacksecretrefwithname)
+    * [`fn withNamespace(namespace)`](#fn-specstacksecretrefwithnamespace)
 
 ## Fields
 
@@ -357,6 +360,26 @@ withName(name)
 "Name of the secret."
 
 ### fn spec.credentials.secretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the secret."
+
+## obj spec.stackSecretRef
+
+"StackSecretRef is an optional reference to a Secret containing Stack\nconnection details (e.g., from a grafana_cloud_stack resource's\nwriteConnectionSecretToRef). All keys in the Secret are merged into\nthe credential map. Key remapping is applied (e.g., oncall_api_url\nbecomes oncall_url, id becomes stack_id). Values from this secret\noverride the primary credentials secret and are in turn overridden by\nexplicit spec fields (url, oncallUrl, etc.)."
+
+### fn spec.stackSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the secret."
+
+### fn spec.stackSecretRef.withNamespace
 
 ```ts
 withNamespace(namespace)

@@ -384,7 +384,7 @@ withFormatsMixin(formats)
 withIncludeDashboardLink(includeDashboardLink)
 ```
 
-"(Boolean) Whether to include a link to the dashboard in the report. Defaults to true.\nWhether to include a link to the dashboard in the report. Defaults to `true`."
+"(Boolean) Whether to include a link to the dashboard in the report.\nWhether to include a link to the dashboard in the report."
 
 ### fn spec.forProvider.withIncludeTableCsv
 
@@ -392,7 +392,7 @@ withIncludeDashboardLink(includeDashboardLink)
 withIncludeTableCsv(includeTableCsv)
 ```
 
-"(Boolean) Whether to include a CSV file of table panel data. Defaults to false.\nWhether to include a CSV file of table panel data. Defaults to `false`."
+"(Boolean) Whether to include a CSV file of table panel data.\nWhether to include a CSV file of table panel data."
 
 ### fn spec.forProvider.withLayout
 
@@ -400,7 +400,7 @@ withIncludeTableCsv(includeTableCsv)
 withLayout(layout)
 ```
 
-"(String) Layout of the report. Allowed values: simple, grid. Defaults to grid.\nLayout of the report. Allowed values: `simple`, `grid`. Defaults to `grid`."
+"(String) Layout of the report. Allowed values: simple, grid.\nLayout of the report. Allowed values: `simple`, `grid`."
 
 ### fn spec.forProvider.withMessage
 
@@ -424,7 +424,7 @@ withName(name)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.forProvider.withOrientation
 
@@ -432,7 +432,7 @@ withOrgId(orgId)
 withOrientation(orientation)
 ```
 
-"(String) Orientation of the report. Allowed values: landscape, portrait. Defaults to landscape.\nOrientation of the report. Allowed values: `landscape`, `portrait`. Defaults to `landscape`."
+"(String) Orientation of the report. Allowed values: landscape, portrait.\nOrientation of the report. Allowed values: `landscape`, `portrait`."
 
 ### fn spec.forProvider.withRecipients
 
@@ -466,7 +466,7 @@ withReplyTo(replyTo)
 withSchedule(schedule)
 ```
 
-"(Block List, Min: 1, Max: 1) Schedule of the report. (see below for nested schema)\nSchedule of the report."
+"(Block List)  Schedule of the report. (see below for nested schema)\n(Required) Schedule of the report."
 
 ### fn spec.forProvider.withScheduleMixin
 
@@ -474,7 +474,7 @@ withSchedule(schedule)
 withScheduleMixin(schedule)
 ```
 
-"(Block List, Min: 1, Max: 1) Schedule of the report. (see below for nested schema)\nSchedule of the report."
+"(Block List)  Schedule of the report. (see below for nested schema)\n(Required) Schedule of the report."
 
 **Note:** This function appends passed data to existing values
 
@@ -506,7 +506,7 @@ withReportVariablesMixin(reportVariables)
 withTimeRange(timeRange)
 ```
 
-"(Block List, Max: 1) Time range of the report. (see below for nested schema)\nTime range of the report."
+"(Block List) Time range of the report. (see below for nested schema)\nTime range of the report."
 
 ### fn spec.forProvider.dashboards.withTimeRangeMixin
 
@@ -514,7 +514,7 @@ withTimeRange(timeRange)
 withTimeRangeMixin(timeRange)
 ```
 
-"(Block List, Max: 1) Time range of the report. (see below for nested schema)\nTime range of the report."
+"(Block List) Time range of the report. (see below for nested schema)\nTime range of the report."
 
 **Note:** This function appends passed data to existing values
 
@@ -528,7 +528,7 @@ withUid(uid)
 
 ## obj spec.forProvider.dashboards.timeRange
 
-"(Block List, Max: 1) Time range of the report. (see below for nested schema)\nTime range of the report."
+"(Block List) Time range of the report. (see below for nested schema)\nTime range of the report."
 
 ### fn spec.forProvider.dashboards.timeRange.withFrom
 
@@ -630,7 +630,7 @@ withResolve(resolve)
 
 ## obj spec.forProvider.schedule
 
-"(Block List, Min: 1, Max: 1) Schedule of the report. (see below for nested schema)\nSchedule of the report."
+"(Block List)  Schedule of the report. (see below for nested schema)\n(Required) Schedule of the report."
 
 ### fn spec.forProvider.schedule.withCustomInterval
 
@@ -662,7 +662,7 @@ withFrequency(frequency)
 withLastDayOfMonth(lastDayOfMonth)
 ```
 
-"(Boolean) Send the report on the last day of the month Defaults to false.\nSend the report on the last day of the month Defaults to `false`."
+"(Boolean) Send the report on the last day of the month\nSend the report on the last day of the month"
 
 ### fn spec.forProvider.schedule.withStartTime
 
@@ -678,7 +678,7 @@ withStartTime(startTime)
 withTimezone(timezone)
 ```
 
-"(String) Set the report time zone. Defaults to GMT.\nSet the report time zone. Defaults to `GMT`."
+"(String) Set the report time zone.\nSet the report time zone."
 
 ### fn spec.forProvider.schedule.withWorkdaysOnly
 
@@ -686,7 +686,7 @@ withTimezone(timezone)
 withWorkdaysOnly(workdaysOnly)
 ```
 
-"(Boolean) Whether to send the report only on work days. Defaults to false.\nWhether to send the report only on work days. Defaults to `false`."
+"(Boolean) Whether to send the report only on work days.\nWhether to send the report only on work days."
 
 ## obj spec.initProvider
 
@@ -734,7 +734,7 @@ withFormatsMixin(formats)
 withIncludeDashboardLink(includeDashboardLink)
 ```
 
-"(Boolean) Whether to include a link to the dashboard in the report. Defaults to true.\nWhether to include a link to the dashboard in the report. Defaults to `true`."
+"(Boolean) Whether to include a link to the dashboard in the report.\nWhether to include a link to the dashboard in the report."
 
 ### fn spec.initProvider.withIncludeTableCsv
 
@@ -742,7 +742,7 @@ withIncludeDashboardLink(includeDashboardLink)
 withIncludeTableCsv(includeTableCsv)
 ```
 
-"(Boolean) Whether to include a CSV file of table panel data. Defaults to false.\nWhether to include a CSV file of table panel data. Defaults to `false`."
+"(Boolean) Whether to include a CSV file of table panel data.\nWhether to include a CSV file of table panel data."
 
 ### fn spec.initProvider.withLayout
 
@@ -750,7 +750,7 @@ withIncludeTableCsv(includeTableCsv)
 withLayout(layout)
 ```
 
-"(String) Layout of the report. Allowed values: simple, grid. Defaults to grid.\nLayout of the report. Allowed values: `simple`, `grid`. Defaults to `grid`."
+"(String) Layout of the report. Allowed values: simple, grid.\nLayout of the report. Allowed values: `simple`, `grid`."
 
 ### fn spec.initProvider.withMessage
 
@@ -774,7 +774,7 @@ withName(name)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.initProvider.withOrientation
 
@@ -782,7 +782,7 @@ withOrgId(orgId)
 withOrientation(orientation)
 ```
 
-"(String) Orientation of the report. Allowed values: landscape, portrait. Defaults to landscape.\nOrientation of the report. Allowed values: `landscape`, `portrait`. Defaults to `landscape`."
+"(String) Orientation of the report. Allowed values: landscape, portrait.\nOrientation of the report. Allowed values: `landscape`, `portrait`."
 
 ### fn spec.initProvider.withRecipients
 
@@ -816,7 +816,7 @@ withReplyTo(replyTo)
 withSchedule(schedule)
 ```
 
-"(Block List, Min: 1, Max: 1) Schedule of the report. (see below for nested schema)\nSchedule of the report."
+"(Block List)  Schedule of the report. (see below for nested schema)\n(Required) Schedule of the report."
 
 ### fn spec.initProvider.withScheduleMixin
 
@@ -824,7 +824,7 @@ withSchedule(schedule)
 withScheduleMixin(schedule)
 ```
 
-"(Block List, Min: 1, Max: 1) Schedule of the report. (see below for nested schema)\nSchedule of the report."
+"(Block List)  Schedule of the report. (see below for nested schema)\n(Required) Schedule of the report."
 
 **Note:** This function appends passed data to existing values
 
@@ -856,7 +856,7 @@ withReportVariablesMixin(reportVariables)
 withTimeRange(timeRange)
 ```
 
-"(Block List, Max: 1) Time range of the report. (see below for nested schema)\nTime range of the report."
+"(Block List) Time range of the report. (see below for nested schema)\nTime range of the report."
 
 ### fn spec.initProvider.dashboards.withTimeRangeMixin
 
@@ -864,7 +864,7 @@ withTimeRange(timeRange)
 withTimeRangeMixin(timeRange)
 ```
 
-"(Block List, Max: 1) Time range of the report. (see below for nested schema)\nTime range of the report."
+"(Block List) Time range of the report. (see below for nested schema)\nTime range of the report."
 
 **Note:** This function appends passed data to existing values
 
@@ -878,7 +878,7 @@ withUid(uid)
 
 ## obj spec.initProvider.dashboards.timeRange
 
-"(Block List, Max: 1) Time range of the report. (see below for nested schema)\nTime range of the report."
+"(Block List) Time range of the report. (see below for nested schema)\nTime range of the report."
 
 ### fn spec.initProvider.dashboards.timeRange.withFrom
 
@@ -980,7 +980,7 @@ withResolve(resolve)
 
 ## obj spec.initProvider.schedule
 
-"(Block List, Min: 1, Max: 1) Schedule of the report. (see below for nested schema)\nSchedule of the report."
+"(Block List)  Schedule of the report. (see below for nested schema)\n(Required) Schedule of the report."
 
 ### fn spec.initProvider.schedule.withCustomInterval
 
@@ -1012,7 +1012,7 @@ withFrequency(frequency)
 withLastDayOfMonth(lastDayOfMonth)
 ```
 
-"(Boolean) Send the report on the last day of the month Defaults to false.\nSend the report on the last day of the month Defaults to `false`."
+"(Boolean) Send the report on the last day of the month\nSend the report on the last day of the month"
 
 ### fn spec.initProvider.schedule.withStartTime
 
@@ -1028,7 +1028,7 @@ withStartTime(startTime)
 withTimezone(timezone)
 ```
 
-"(String) Set the report time zone. Defaults to GMT.\nSet the report time zone. Defaults to `GMT`."
+"(String) Set the report time zone.\nSet the report time zone."
 
 ### fn spec.initProvider.schedule.withWorkdaysOnly
 
@@ -1036,7 +1036,7 @@ withTimezone(timezone)
 withWorkdaysOnly(workdaysOnly)
 ```
 
-"(Boolean) Whether to send the report only on work days. Defaults to false.\nWhether to send the report only on work days. Defaults to `false`."
+"(Boolean) Whether to send the report only on work days.\nWhether to send the report only on work days."
 
 ## obj spec.providerConfigRef
 

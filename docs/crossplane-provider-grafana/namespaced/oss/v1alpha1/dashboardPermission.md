@@ -384,7 +384,7 @@ withDashboardUid(dashboardUid)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.forProvider.withPermissions
 
@@ -610,7 +610,7 @@ withResolve(resolve)
 withPermission(permission)
 ```
 
-"(String) Permission to associate with item. Must be one of View, Edit, or Admin.\nPermission to associate with item. Must be one of `View`, `Edit`, or `Admin`."
+"(String) Permission to associate with item. Options: View, Edit, Admin.\nPermission to associate with item. Options: View, Edit, Admin."
 
 ### fn spec.forProvider.permissions.withRole
 
@@ -626,7 +626,7 @@ withRole(role)
 withTeamId(teamId)
 ```
 
-"(String) ID of the team to manage permissions for. Defaults to 0.\nID of the team to manage permissions for. Defaults to `0`."
+"(String) ID of the team to manage permissions for.\nID of the team to manage permissions for."
 
 ### fn spec.forProvider.permissions.withUserId
 
@@ -634,7 +634,7 @@ withTeamId(teamId)
 withUserId(userId)
 ```
 
-"(String) ID of the user or service account to manage permissions for. Defaults to 0.\nID of the user or service account to manage permissions for. Defaults to `0`."
+"(String) ID of the user or service account to manage permissions for.\nID of the user or service account to manage permissions for."
 
 ## obj spec.forProvider.permissions.teamRef
 
@@ -850,7 +850,7 @@ withDashboardUid(dashboardUid)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.initProvider.withPermissions
 
@@ -1076,7 +1076,7 @@ withResolve(resolve)
 withPermission(permission)
 ```
 
-"(String) Permission to associate with item. Must be one of View, Edit, or Admin.\nPermission to associate with item. Must be one of `View`, `Edit`, or `Admin`."
+"(String) Permission to associate with item. Options: View, Edit, Admin.\nPermission to associate with item. Options: View, Edit, Admin."
 
 ### fn spec.initProvider.permissions.withRole
 
@@ -1092,7 +1092,7 @@ withRole(role)
 withTeamId(teamId)
 ```
 
-"(String) ID of the team to manage permissions for. Defaults to 0.\nID of the team to manage permissions for. Defaults to `0`."
+"(String) ID of the team to manage permissions for.\nID of the team to manage permissions for."
 
 ### fn spec.initProvider.permissions.withUserId
 
@@ -1100,7 +1100,7 @@ withTeamId(teamId)
 withUserId(userId)
 ```
 
-"(String) ID of the user or service account to manage permissions for. Defaults to 0.\nID of the user or service account to manage permissions for. Defaults to `0`."
+"(String) ID of the user or service account to manage permissions for.\nID of the user or service account to manage permissions for."
 
 ## obj spec.initProvider.permissions.teamRef
 

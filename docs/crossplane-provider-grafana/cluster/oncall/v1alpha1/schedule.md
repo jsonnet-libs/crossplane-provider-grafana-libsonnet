@@ -62,6 +62,42 @@ permalink: /crossplane-provider-grafana/cluster/oncall/v1alpha1/schedule/
     * [`obj spec.forProvider.slack`](#obj-specforproviderslack)
       * [`fn withChannelId(channelId)`](#fn-specforproviderslackwithchannelid)
       * [`fn withUserGroupId(userGroupId)`](#fn-specforproviderslackwithusergroupid)
+      * [`obj spec.forProvider.slack.slackChannelRef`](#obj-specforproviderslackslackchannelref)
+        * [`fn withName(name)`](#fn-specforproviderslackslackchannelrefwithname)
+        * [`obj spec.forProvider.slack.slackChannelRef.policy`](#obj-specforproviderslackslackchannelrefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforproviderslackslackchannelrefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforproviderslackslackchannelrefpolicywithresolve)
+      * [`obj spec.forProvider.slack.slackChannelSelector`](#obj-specforproviderslackslackchannelselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderslackslackchannelselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderslackslackchannelselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderslackslackchannelselectorwithmatchlabelsmixin)
+        * [`obj spec.forProvider.slack.slackChannelSelector.policy`](#obj-specforproviderslackslackchannelselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforproviderslackslackchannelselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforproviderslackslackchannelselectorpolicywithresolve)
+      * [`obj spec.forProvider.slack.slackUserGroupRef`](#obj-specforproviderslackslackusergroupref)
+        * [`fn withName(name)`](#fn-specforproviderslackslackusergrouprefwithname)
+        * [`obj spec.forProvider.slack.slackUserGroupRef.policy`](#obj-specforproviderslackslackusergrouprefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforproviderslackslackusergrouprefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforproviderslackslackusergrouprefpolicywithresolve)
+      * [`obj spec.forProvider.slack.slackUserGroupSelector`](#obj-specforproviderslackslackusergroupselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderslackslackusergroupselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderslackslackusergroupselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderslackslackusergroupselectorwithmatchlabelsmixin)
+        * [`obj spec.forProvider.slack.slackUserGroupSelector.policy`](#obj-specforproviderslackslackusergroupselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specforproviderslackslackusergroupselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specforproviderslackslackusergroupselectorpolicywithresolve)
+    * [`obj spec.forProvider.teamRef`](#obj-specforproviderteamref)
+      * [`fn withName(name)`](#fn-specforproviderteamrefwithname)
+      * [`obj spec.forProvider.teamRef.policy`](#obj-specforproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamrefpolicywithresolve)
+    * [`obj spec.forProvider.teamSelector`](#obj-specforproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.teamSelector.policy`](#obj-specforproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
     * [`fn withEnableWebOverrides(enableWebOverrides)`](#fn-specinitproviderwithenableweboverrides)
     * [`fn withIcalUrlOverrides(icalUrlOverrides)`](#fn-specinitproviderwithicalurloverrides)
@@ -91,6 +127,42 @@ permalink: /crossplane-provider-grafana/cluster/oncall/v1alpha1/schedule/
     * [`obj spec.initProvider.slack`](#obj-specinitproviderslack)
       * [`fn withChannelId(channelId)`](#fn-specinitproviderslackwithchannelid)
       * [`fn withUserGroupId(userGroupId)`](#fn-specinitproviderslackwithusergroupid)
+      * [`obj spec.initProvider.slack.slackChannelRef`](#obj-specinitproviderslackslackchannelref)
+        * [`fn withName(name)`](#fn-specinitproviderslackslackchannelrefwithname)
+        * [`obj spec.initProvider.slack.slackChannelRef.policy`](#obj-specinitproviderslackslackchannelrefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitproviderslackslackchannelrefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitproviderslackslackchannelrefpolicywithresolve)
+      * [`obj spec.initProvider.slack.slackChannelSelector`](#obj-specinitproviderslackslackchannelselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderslackslackchannelselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderslackslackchannelselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderslackslackchannelselectorwithmatchlabelsmixin)
+        * [`obj spec.initProvider.slack.slackChannelSelector.policy`](#obj-specinitproviderslackslackchannelselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitproviderslackslackchannelselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitproviderslackslackchannelselectorpolicywithresolve)
+      * [`obj spec.initProvider.slack.slackUserGroupRef`](#obj-specinitproviderslackslackusergroupref)
+        * [`fn withName(name)`](#fn-specinitproviderslackslackusergrouprefwithname)
+        * [`obj spec.initProvider.slack.slackUserGroupRef.policy`](#obj-specinitproviderslackslackusergrouprefpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitproviderslackslackusergrouprefpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitproviderslackslackusergrouprefpolicywithresolve)
+      * [`obj spec.initProvider.slack.slackUserGroupSelector`](#obj-specinitproviderslackslackusergroupselector)
+        * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderslackslackusergroupselectorwithmatchcontrollerref)
+        * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderslackslackusergroupselectorwithmatchlabels)
+        * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderslackslackusergroupselectorwithmatchlabelsmixin)
+        * [`obj spec.initProvider.slack.slackUserGroupSelector.policy`](#obj-specinitproviderslackslackusergroupselectorpolicy)
+          * [`fn withResolution(resolution)`](#fn-specinitproviderslackslackusergroupselectorpolicywithresolution)
+          * [`fn withResolve(resolve)`](#fn-specinitproviderslackslackusergroupselectorpolicywithresolve)
+    * [`obj spec.initProvider.teamRef`](#obj-specinitproviderteamref)
+      * [`fn withName(name)`](#fn-specinitproviderteamrefwithname)
+      * [`obj spec.initProvider.teamRef.policy`](#obj-specinitproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamrefpolicywithresolve)
+    * [`obj spec.initProvider.teamSelector`](#obj-specinitproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabelsmixin)
+      * [`obj spec.initProvider.teamSelector.policy`](#obj-specinitproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamselectorpolicywithresolve)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -520,6 +592,252 @@ withUserGroupId(userGroupId)
 
 "call users change.\nSlack user group id. Members of user group will be updated when on-call users change."
 
+## obj spec.forProvider.slack.slackChannelRef
+
+"Reference to a SlackChannel in oncall to populate channelId."
+
+### fn spec.forProvider.slack.slackChannelRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.slack.slackChannelRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.slack.slackChannelRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.slack.slackChannelRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.slack.slackChannelSelector
+
+"Selector for a SlackChannel in oncall to populate channelId."
+
+### fn spec.forProvider.slack.slackChannelSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.slack.slackChannelSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.slack.slackChannelSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.slack.slackChannelSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.slack.slackChannelSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.slack.slackChannelSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.slack.slackUserGroupRef
+
+"Reference to a UserGroup in oncall to populate userGroupId."
+
+### fn spec.forProvider.slack.slackUserGroupRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.slack.slackUserGroupRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.slack.slackUserGroupRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.slack.slackUserGroupRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.slack.slackUserGroupSelector
+
+"Selector for a UserGroup in oncall to populate userGroupId."
+
+### fn spec.forProvider.slack.slackUserGroupSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.slack.slackUserGroupSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.slack.slackUserGroupSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.slack.slackUserGroupSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.slack.slackUserGroupSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.slack.slackUserGroupSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
@@ -735,6 +1053,252 @@ withUserGroupId(userGroupId)
 ```
 
 "call users change.\nSlack user group id. Members of user group will be updated when on-call users change."
+
+## obj spec.initProvider.slack.slackChannelRef
+
+"Reference to a SlackChannel in oncall to populate channelId."
+
+### fn spec.initProvider.slack.slackChannelRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.initProvider.slack.slackChannelRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.slack.slackChannelRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.slack.slackChannelRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.slack.slackChannelSelector
+
+"Selector for a SlackChannel in oncall to populate channelId."
+
+### fn spec.initProvider.slack.slackChannelSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.slack.slackChannelSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.slack.slackChannelSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.initProvider.slack.slackChannelSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.slack.slackChannelSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.slack.slackChannelSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.slack.slackUserGroupRef
+
+"Reference to a UserGroup in oncall to populate userGroupId."
+
+### fn spec.initProvider.slack.slackUserGroupRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.initProvider.slack.slackUserGroupRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.slack.slackUserGroupRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.slack.slackUserGroupRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.slack.slackUserGroupSelector
+
+"Selector for a UserGroup in oncall to populate userGroupId."
+
+### fn spec.initProvider.slack.slackUserGroupSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.slack.slackUserGroupSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.slack.slackUserGroupSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.initProvider.slack.slackUserGroupSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.slack.slackUserGroupSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.slack.slackUserGroupSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.initProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.initProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.providerConfigRef
 

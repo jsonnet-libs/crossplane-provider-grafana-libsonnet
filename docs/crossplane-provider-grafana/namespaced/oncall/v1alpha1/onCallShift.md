@@ -54,7 +54,37 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/onCallShift/
     * [`fn withUntil(until)`](#fn-specforproviderwithuntil)
     * [`fn withUsers(users)`](#fn-specforproviderwithusers)
     * [`fn withUsersMixin(users)`](#fn-specforproviderwithusersmixin)
+    * [`fn withUsersRef(usersRef)`](#fn-specforproviderwithusersref)
+    * [`fn withUsersRefMixin(usersRef)`](#fn-specforproviderwithusersrefmixin)
     * [`fn withWeekStart(weekStart)`](#fn-specforproviderwithweekstart)
+    * [`obj spec.forProvider.teamRef`](#obj-specforproviderteamref)
+      * [`fn withName(name)`](#fn-specforproviderteamrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderteamrefwithnamespace)
+      * [`obj spec.forProvider.teamRef.policy`](#obj-specforproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamrefpolicywithresolve)
+    * [`obj spec.forProvider.teamSelector`](#obj-specforproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderteamselectorwithnamespace)
+      * [`obj spec.forProvider.teamSelector.policy`](#obj-specforproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamselectorpolicywithresolve)
+    * [`obj spec.forProvider.usersRef`](#obj-specforproviderusersref)
+      * [`fn withName(name)`](#fn-specforproviderusersrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderusersrefwithnamespace)
+      * [`obj spec.forProvider.usersRef.policy`](#obj-specforproviderusersrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderusersrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderusersrefpolicywithresolve)
+    * [`obj spec.forProvider.usersSelector`](#obj-specforproviderusersselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderusersselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderusersselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderusersselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderusersselectorwithnamespace)
+      * [`obj spec.forProvider.usersSelector.policy`](#obj-specforproviderusersselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderusersselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderusersselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
     * [`fn withByDay(byDay)`](#fn-specinitproviderwithbyday)
     * [`fn withByDayMixin(byDay)`](#fn-specinitproviderwithbydaymixin)
@@ -77,7 +107,37 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/onCallShift/
     * [`fn withUntil(until)`](#fn-specinitproviderwithuntil)
     * [`fn withUsers(users)`](#fn-specinitproviderwithusers)
     * [`fn withUsersMixin(users)`](#fn-specinitproviderwithusersmixin)
+    * [`fn withUsersRef(usersRef)`](#fn-specinitproviderwithusersref)
+    * [`fn withUsersRefMixin(usersRef)`](#fn-specinitproviderwithusersrefmixin)
     * [`fn withWeekStart(weekStart)`](#fn-specinitproviderwithweekstart)
+    * [`obj spec.initProvider.teamRef`](#obj-specinitproviderteamref)
+      * [`fn withName(name)`](#fn-specinitproviderteamrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderteamrefwithnamespace)
+      * [`obj spec.initProvider.teamRef.policy`](#obj-specinitproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamrefpolicywithresolve)
+    * [`obj spec.initProvider.teamSelector`](#obj-specinitproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderteamselectorwithnamespace)
+      * [`obj spec.initProvider.teamSelector.policy`](#obj-specinitproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamselectorpolicywithresolve)
+    * [`obj spec.initProvider.usersRef`](#obj-specinitproviderusersref)
+      * [`fn withName(name)`](#fn-specinitproviderusersrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderusersrefwithnamespace)
+      * [`obj spec.initProvider.usersRef.policy`](#obj-specinitproviderusersrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderusersrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderusersrefpolicywithresolve)
+    * [`obj spec.initProvider.usersSelector`](#obj-specinitproviderusersselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderusersselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderusersselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderusersselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderusersselectorwithnamespace)
+      * [`obj spec.initProvider.usersSelector.policy`](#obj-specinitproviderusersselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderusersselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderusersselectorpolicywithresolve)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withKind(kind)`](#fn-specproviderconfigrefwithkind)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
@@ -462,6 +522,24 @@ withUsersMixin(users)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.forProvider.withUsersRef
+
+```ts
+withUsersRef(usersRef)
+```
+
+"References to User in oncall to populate users."
+
+### fn spec.forProvider.withUsersRefMixin
+
+```ts
+withUsersRefMixin(usersRef)
+```
+
+"References to User in oncall to populate users."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.forProvider.withWeekStart
 
 ```ts
@@ -469,6 +547,202 @@ withWeekStart(weekStart)
 ```
 
 "(String) Start day of the week in iCal format. Can be MO, TU, WE, TH, FR, SA, SU\nStart day of the week in iCal format. Can be MO, TU, WE, TH, FR, SA, SU"
+
+## obj spec.forProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.teamRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.teamSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.usersRef
+
+"References to User in oncall to populate users."
+
+### fn spec.forProvider.usersRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.usersRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.usersRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.usersRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.usersRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.usersSelector
+
+"Selector for a list of User in oncall to populate users."
+
+### fn spec.forProvider.usersSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.usersSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.usersSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.usersSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.usersSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.usersSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.usersSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.initProvider
 
@@ -652,6 +926,24 @@ withUsersMixin(users)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.initProvider.withUsersRef
+
+```ts
+withUsersRef(usersRef)
+```
+
+"References to User in oncall to populate users."
+
+### fn spec.initProvider.withUsersRefMixin
+
+```ts
+withUsersRefMixin(usersRef)
+```
+
+"References to User in oncall to populate users."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.initProvider.withWeekStart
 
 ```ts
@@ -659,6 +951,202 @@ withWeekStart(weekStart)
 ```
 
 "(String) Start day of the week in iCal format. Can be MO, TU, WE, TH, FR, SA, SU\nStart day of the week in iCal format. Can be MO, TU, WE, TH, FR, SA, SU"
+
+## obj spec.initProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.teamRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.teamSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.usersRef
+
+"References to User in oncall to populate users."
+
+### fn spec.initProvider.usersRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.usersRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.usersRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.usersRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.usersRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.usersSelector
+
+"Selector for a list of User in oncall to populate users."
+
+### fn spec.initProvider.usersSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.usersSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.usersSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.usersSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.usersSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.usersSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.usersSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.providerConfigRef
 

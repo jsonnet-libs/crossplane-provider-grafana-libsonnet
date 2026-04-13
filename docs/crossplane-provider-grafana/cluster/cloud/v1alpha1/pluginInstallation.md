@@ -4,7 +4,7 @@ permalink: /crossplane-provider-grafana/cluster/cloud/v1alpha1/pluginInstallatio
 
 # cloud.v1alpha1.pluginInstallation
 
-"PluginInstallation is the Schema for the PluginInstallations API. Manages Grafana Cloud Plugin Installations. Plugin Catalog https://grafana.com/grafana/plugins/ Required access policy scopes: stack-plugins:readstack-plugins:writestack-plugins:delete"
+"PluginInstallation is the Schema for the PluginInstallations API. Manages Grafana Cloud Plugin Installations. Plugin management https://grafana.com/docs/grafana/latest/administration/plugin-management/ Required access policy scopes: stack-plugins:readstack-plugins:writestack-plugins:delete"
 
 ## Index
 

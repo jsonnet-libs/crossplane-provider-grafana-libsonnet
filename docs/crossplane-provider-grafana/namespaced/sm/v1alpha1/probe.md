@@ -280,7 +280,7 @@ withDisableScriptedChecks(disableScriptedChecks)
 withLabels(labels)
 ```
 
-"(Map of String) Custom labels to be included with collected metrics and logs.\nCustom labels to be included with collected metrics and logs."
+"(Map of String) Custom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3.\nCustom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3."
 
 ### fn spec.forProvider.withLabelsMixin
 
@@ -288,7 +288,7 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"(Map of String) Custom labels to be included with collected metrics and logs.\nCustom labels to be included with collected metrics and logs."
+"(Map of String) Custom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3.\nCustom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3."
 
 **Note:** This function appends passed data to existing values
 
@@ -358,7 +358,7 @@ withDisableScriptedChecks(disableScriptedChecks)
 withLabels(labels)
 ```
 
-"(Map of String) Custom labels to be included with collected metrics and logs.\nCustom labels to be included with collected metrics and logs."
+"(Map of String) Custom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3.\nCustom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3."
 
 ### fn spec.initProvider.withLabelsMixin
 
@@ -366,7 +366,7 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"(Map of String) Custom labels to be included with collected metrics and logs.\nCustom labels to be included with collected metrics and logs."
+"(Map of String) Custom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3.\nCustom labels to be included with collected metrics and logs. The maximum number of labels for private probes is 3."
 
 **Note:** This function appends passed data to existing values
 

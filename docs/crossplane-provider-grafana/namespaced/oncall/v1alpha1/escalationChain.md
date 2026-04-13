@@ -35,9 +35,37 @@ permalink: /crossplane-provider-grafana/namespaced/oncall/v1alpha1/escalationCha
   * [`obj spec.forProvider`](#obj-specforprovider)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withTeamId(teamId)`](#fn-specforproviderwithteamid)
+    * [`obj spec.forProvider.teamRef`](#obj-specforproviderteamref)
+      * [`fn withName(name)`](#fn-specforproviderteamrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderteamrefwithnamespace)
+      * [`obj spec.forProvider.teamRef.policy`](#obj-specforproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamrefpolicywithresolve)
+    * [`obj spec.forProvider.teamSelector`](#obj-specforproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specforproviderteamselectorwithnamespace)
+      * [`obj spec.forProvider.teamSelector.policy`](#obj-specforproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
     * [`fn withName(name)`](#fn-specinitproviderwithname)
     * [`fn withTeamId(teamId)`](#fn-specinitproviderwithteamid)
+    * [`obj spec.initProvider.teamRef`](#obj-specinitproviderteamref)
+      * [`fn withName(name)`](#fn-specinitproviderteamrefwithname)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderteamrefwithnamespace)
+      * [`obj spec.initProvider.teamRef.policy`](#obj-specinitproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamrefpolicywithresolve)
+    * [`obj spec.initProvider.teamSelector`](#obj-specinitproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabelsmixin)
+      * [`fn withNamespace(namespace)`](#fn-specinitproviderteamselectorwithnamespace)
+      * [`obj spec.initProvider.teamSelector.policy`](#obj-specinitproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamselectorpolicywithresolve)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withKind(kind)`](#fn-specproviderconfigrefwithkind)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
@@ -260,6 +288,104 @@ withTeamId(teamId)
 
 "(String) The ID of the OnCall team (using the grafana_oncall_team datasource).\nThe ID of the OnCall team (using the `grafana_oncall_team` datasource)."
 
+## obj spec.forProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.forProvider.teamRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.forProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.forProvider.teamSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.forProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
@@ -279,6 +405,104 @@ withTeamId(teamId)
 ```
 
 "(String) The ID of the OnCall team (using the grafana_oncall_team datasource).\nThe ID of the OnCall team (using the `grafana_oncall_team` datasource)."
+
+## obj spec.initProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+### fn spec.initProvider.teamRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the referenced object"
+
+## obj spec.initProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.teamSelector.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace for the selector"
+
+## obj spec.initProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.providerConfigRef
 

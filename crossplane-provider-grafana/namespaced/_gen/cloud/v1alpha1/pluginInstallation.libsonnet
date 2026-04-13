@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='pluginInstallation', url='', help='"PluginInstallation is the Schema for the PluginInstallations API. Manages Grafana Cloud Plugin Installations. Plugin Catalog https://grafana.com/grafana/plugins/ Required access policy scopes: stack-plugins:readstack-plugins:writestack-plugins:delete"'),
+  '#':: d.pkg(name='pluginInstallation', url='', help='"PluginInstallation is the Schema for the PluginInstallations API. Manages Grafana Cloud Plugin Installations. Plugin management https://grafana.com/docs/grafana/latest/administration/plugin-management/ Required access policy scopes: stack-plugins:readstack-plugins:writestack-plugins:delete"'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),

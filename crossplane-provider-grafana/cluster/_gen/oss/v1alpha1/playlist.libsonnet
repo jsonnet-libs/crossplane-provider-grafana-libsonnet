@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='playlist', url='', help='"Playlist is the Schema for the Playlists API. Official documentation https://grafana.com/docs/grafana/latest/dashboards/create-manage-playlists/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/playlist/"'),
+  '#':: d.pkg(name='playlist', url='', help='"Playlist is the Schema for the Playlists API. Manages Grafana playlists. Official documentation https://grafana.com/docs/grafana/latest/dashboards/create-manage-playlists/HTTP API https://grafana.com/docs/grafana/latest/developers/http_api/playlist/"'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),
@@ -53,7 +53,7 @@
   spec: {
     '#forProvider':: d.obj(help=''),
     forProvider: {
-      '#item':: d.obj(help='"(Block Set, Min: 1) (see below for nested schema)"'),
+      '#item':: d.obj(help='"(Block Set) (see below for nested schema)"'),
       item: {
         '#withOrder':: d.fn(help='"(Number)"', args=[d.arg(name='order', type=d.T.number)]),
         withOrder(order): { order: order },
@@ -92,9 +92,9 @@
       },
       '#withInterval':: d.fn(help='"(String)"', args=[d.arg(name='interval', type=d.T.string)]),
       withInterval(interval): { spec+: { forProvider+: { interval: interval } } },
-      '#withItem':: d.fn(help='"(Block Set, Min: 1) (see below for nested schema)"', args=[d.arg(name='item', type=d.T.array)]),
+      '#withItem':: d.fn(help='"(Block Set) (see below for nested schema)"', args=[d.arg(name='item', type=d.T.array)]),
       withItem(item): { spec+: { forProvider+: { item: if std.isArray(v=item) then item else [item] } } },
-      '#withItemMixin':: d.fn(help='"(Block Set, Min: 1) (see below for nested schema)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='item', type=d.T.array)]),
+      '#withItemMixin':: d.fn(help='"(Block Set) (see below for nested schema)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='item', type=d.T.array)]),
       withItemMixin(item): { spec+: { forProvider+: { item+: if std.isArray(v=item) then item else [item] } } },
       '#withName':: d.fn(help='"(String) The name of the playlist.\\nThe name of the playlist."', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { forProvider+: { name: name } } },
@@ -103,7 +103,7 @@
     },
     '#initProvider':: d.obj(help='"THIS IS A BETA FIELD. It will be honored\\nunless the Management Policies feature flag is disabled.\\nInitProvider holds the same fields as ForProvider, with the exception\\nof Identifier and other resource reference fields. The fields that are\\nin InitProvider are merged into ForProvider when the resource is created.\\nThe same fields are also added to the terraform ignore_changes hook, to\\navoid updating them after creation. This is useful for fields that are\\nrequired on creation, but we do not desire to update them after creation,\\nfor example because of an external controller is managing them, like an\\nautoscaler."'),
     initProvider: {
-      '#item':: d.obj(help='"(Block Set, Min: 1) (see below for nested schema)"'),
+      '#item':: d.obj(help='"(Block Set) (see below for nested schema)"'),
       item: {
         '#withOrder':: d.fn(help='"(Number)"', args=[d.arg(name='order', type=d.T.number)]),
         withOrder(order): { order: order },
@@ -142,9 +142,9 @@
       },
       '#withInterval':: d.fn(help='"(String)"', args=[d.arg(name='interval', type=d.T.string)]),
       withInterval(interval): { spec+: { initProvider+: { interval: interval } } },
-      '#withItem':: d.fn(help='"(Block Set, Min: 1) (see below for nested schema)"', args=[d.arg(name='item', type=d.T.array)]),
+      '#withItem':: d.fn(help='"(Block Set) (see below for nested schema)"', args=[d.arg(name='item', type=d.T.array)]),
       withItem(item): { spec+: { initProvider+: { item: if std.isArray(v=item) then item else [item] } } },
-      '#withItemMixin':: d.fn(help='"(Block Set, Min: 1) (see below for nested schema)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='item', type=d.T.array)]),
+      '#withItemMixin':: d.fn(help='"(Block Set) (see below for nested schema)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='item', type=d.T.array)]),
       withItemMixin(item): { spec+: { initProvider+: { item+: if std.isArray(v=item) then item else [item] } } },
       '#withName':: d.fn(help='"(String) The name of the playlist.\\nThe name of the playlist."', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { initProvider+: { name: name } } },

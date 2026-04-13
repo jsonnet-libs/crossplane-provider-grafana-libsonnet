@@ -73,6 +73,13 @@
       '#withSource':: d.fn(help='"A CredentialsSource is a source from which provider credentials may be\\nacquired."', args=[d.arg(name='source', type=d.T.string)]),
       withSource(source): { spec+: { credentials+: { source: source } } },
     },
+    '#stackSecretRef':: d.obj(help="\"StackSecretRef is an optional reference to a Secret containing Stack\\nconnection details (e.g., from a grafana_cloud_stack resource's\\nwriteConnectionSecretToRef). All keys in the Secret are merged into\\nthe credential map. Key remapping is applied (e.g., oncall_api_url\\nbecomes oncall_url, id becomes stack_id). Values from this secret\\noverride the primary credentials secret and are in turn overridden by\\nexplicit spec fields (url, oncallUrl, etc.).\""),
+    stackSecretRef: {
+      '#withName':: d.fn(help='"Name of the secret."', args=[d.arg(name='name', type=d.T.string)]),
+      withName(name): { spec+: { stackSecretRef+: { name: name } } },
+      '#withNamespace':: d.fn(help='"Namespace of the secret."', args=[d.arg(name='namespace', type=d.T.string)]),
+      withNamespace(namespace): { spec+: { stackSecretRef+: { namespace: namespace } } },
+    },
     '#withCloudApiUrl':: d.fn(help='', args=[d.arg(name='cloudApiUrl', type=d.T.string)]),
     withCloudApiUrl(cloudApiUrl): { spec+: { cloudApiUrl: cloudApiUrl } },
     '#withCloudProviderUrl':: d.fn(help='', args=[d.arg(name='cloudProviderUrl', type=d.T.string)]),

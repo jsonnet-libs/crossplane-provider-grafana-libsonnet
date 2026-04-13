@@ -354,7 +354,7 @@ withEmail(email)
 withIgnoreExternallySyncedMembers(ignoreExternallySyncedMembers)
 ```
 
-"(Boolean) Ignores team members that have been added to team by Team Sync.\nTeam Sync can be provisioned using grafana_team_external_group resource.\nDefaults to true.\nIgnores team members that have been added to team by [Team Sync](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/).\nTeam Sync can be provisioned using [grafana_team_external_group resource](https://registry.io/providers/grafana/grafana/latest/docs/resources/team_external_group).\nDefaults to `true`."
+"(Boolean) Ignores team members that have been added to team by Team Sync. Team Sync can be provisioned using grafana_team_external_group resource.\nIgnores team members that have been added to team by [Team Sync](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/). Team Sync can be provisioned using [grafana_team_external_group resource](https://registry.io/providers/grafana/grafana/latest/docs/resources/team_external_group)."
 
 ### fn spec.forProvider.withMemberRefs
 
@@ -380,7 +380,7 @@ withMemberRefsMixin(memberRefs)
 withMembers(members)
 ```
 
-"(Set of String) A set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana."
+"(Set of String) A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
 
 ### fn spec.forProvider.withMembersMixin
 
@@ -388,7 +388,7 @@ withMembers(members)
 withMembersMixin(members)
 ```
 
-"(Set of String) A set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana."
+"(Set of String) A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
 
 **Note:** This function appends passed data to existing values
 
@@ -406,7 +406,7 @@ withName(name)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.forProvider.withPreferences
 
@@ -414,7 +414,7 @@ withOrgId(orgId)
 withPreferences(preferences)
 ```
 
-"(Block List, Max: 1) (see below for nested schema)"
+"(Block List) (see below for nested schema)"
 
 ### fn spec.forProvider.withPreferencesMixin
 
@@ -422,7 +422,7 @@ withPreferences(preferences)
 withPreferencesMixin(preferences)
 ```
 
-"(Block List, Max: 1) (see below for nested schema)"
+"(Block List) (see below for nested schema)"
 
 **Note:** This function appends passed data to existing values
 
@@ -432,7 +432,7 @@ withPreferencesMixin(preferences)
 withTeamSync(teamSync)
 ```
 
-"(Block List, Max: 1) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
+"(Block List) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
 
 ### fn spec.forProvider.withTeamSyncMixin
 
@@ -440,7 +440,7 @@ withTeamSync(teamSync)
 withTeamSyncMixin(teamSync)
 ```
 
-"(Block List, Max: 1) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
+"(Block List) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
 
 **Note:** This function appends passed data to existing values
 
@@ -610,7 +610,7 @@ withResolve(resolve)
 
 ## obj spec.forProvider.preferences
 
-"(Block List, Max: 1) (see below for nested schema)"
+"(Block List) (see below for nested schema)"
 
 ### fn spec.forProvider.preferences.withHomeDashboardUid
 
@@ -618,7 +618,7 @@ withResolve(resolve)
 withHomeDashboardUid(homeDashboardUid)
 ```
 
-"(String) The UID of the dashboard to display when a team member logs in. Defaults to “.\nThe UID of the dashboard to display when a team member logs in. Defaults to “."
+"(String) The UID of the dashboard to display when a team member logs in.\nThe UID of the dashboard to display when a team member logs in."
 
 ### fn spec.forProvider.preferences.withTheme
 
@@ -626,7 +626,7 @@ withHomeDashboardUid(homeDashboardUid)
 withTheme(theme)
 ```
 
-"(String) The default theme for this team. Available themes are light, dark, system, or an empty string for the default theme. Defaults to “.\nThe default theme for this team. Available themes are `light`, `dark`, `system`, or an empty string for the default theme. Defaults to “."
+"(String) The default theme for this team. Available themes are light, dark, system, or an empty string for the default theme.\nThe default theme for this team. Available themes are `light`, `dark`, `system`, or an empty string for the default theme."
 
 ### fn spec.forProvider.preferences.withTimezone
 
@@ -634,7 +634,7 @@ withTheme(theme)
 withTimezone(timezone)
 ```
 
-"(String) The default timezone for this team. Available values are utc, browser, or an empty string for the default. Defaults to “.\nThe default timezone for this team. Available values are `utc`, `browser`, or an empty string for the default. Defaults to “."
+"(String) The default timezone for this team. Available values are utc, browser, or an empty string for the default.\nThe default timezone for this team. Available values are `utc`, `browser`, or an empty string for the default."
 
 ### fn spec.forProvider.preferences.withWeekStart
 
@@ -642,11 +642,11 @@ withTimezone(timezone)
 withWeekStart(weekStart)
 ```
 
-"(String) The default week start day for this team. Available values are sunday, monday, saturday, or an empty string for the default. Defaults to “.\nThe default week start day for this team. Available values are `sunday`, `monday`, `saturday`, or an empty string for the default. Defaults to “."
+"(String) The default week start day for this team. Available values are sunday, monday, saturday, or an empty string for the default.\nThe default week start day for this team. Available values are `sunday`, `monday`, `saturday`, or an empty string for the default."
 
 ## obj spec.forProvider.teamSync
 
-"(Block List, Max: 1) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
+"(Block List) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
 
 ### fn spec.forProvider.teamSync.withGroups
 
@@ -684,7 +684,7 @@ withEmail(email)
 withIgnoreExternallySyncedMembers(ignoreExternallySyncedMembers)
 ```
 
-"(Boolean) Ignores team members that have been added to team by Team Sync.\nTeam Sync can be provisioned using grafana_team_external_group resource.\nDefaults to true.\nIgnores team members that have been added to team by [Team Sync](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/).\nTeam Sync can be provisioned using [grafana_team_external_group resource](https://registry.io/providers/grafana/grafana/latest/docs/resources/team_external_group).\nDefaults to `true`."
+"(Boolean) Ignores team members that have been added to team by Team Sync. Team Sync can be provisioned using grafana_team_external_group resource.\nIgnores team members that have been added to team by [Team Sync](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/). Team Sync can be provisioned using [grafana_team_external_group resource](https://registry.io/providers/grafana/grafana/latest/docs/resources/team_external_group)."
 
 ### fn spec.initProvider.withMemberRefs
 
@@ -710,7 +710,7 @@ withMemberRefsMixin(memberRefs)
 withMembers(members)
 ```
 
-"(Set of String) A set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana."
+"(Set of String) A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
 
 ### fn spec.initProvider.withMembersMixin
 
@@ -718,7 +718,7 @@ withMembers(members)
 withMembersMixin(members)
 ```
 
-"(Set of String) A set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership\nto the team. Note: users specified here must already exist in Grafana."
+"(Set of String) A set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana.\nA set of email addresses corresponding to users who should be given membership to the team. Note: users specified here must already exist in Grafana."
 
 **Note:** This function appends passed data to existing values
 
@@ -736,7 +736,7 @@ withName(name)
 withOrgId(orgId)
 ```
 
-"(String) The Organization ID. If not set, the Org ID defined in the provider block will be used.\nThe Organization ID. If not set, the Org ID defined in the provider block will be used."
+"(String) The Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication.\nThe Organization ID. If not set, the default organization is used for basic authentication, or the one that owns your service account for token authentication."
 
 ### fn spec.initProvider.withPreferences
 
@@ -744,7 +744,7 @@ withOrgId(orgId)
 withPreferences(preferences)
 ```
 
-"(Block List, Max: 1) (see below for nested schema)"
+"(Block List) (see below for nested schema)"
 
 ### fn spec.initProvider.withPreferencesMixin
 
@@ -752,7 +752,7 @@ withPreferences(preferences)
 withPreferencesMixin(preferences)
 ```
 
-"(Block List, Max: 1) (see below for nested schema)"
+"(Block List) (see below for nested schema)"
 
 **Note:** This function appends passed data to existing values
 
@@ -762,7 +762,7 @@ withPreferencesMixin(preferences)
 withTeamSync(teamSync)
 ```
 
-"(Block List, Max: 1) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
+"(Block List) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
 
 ### fn spec.initProvider.withTeamSyncMixin
 
@@ -770,7 +770,7 @@ withTeamSync(teamSync)
 withTeamSyncMixin(teamSync)
 ```
 
-"(Block List, Max: 1) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
+"(Block List) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
 
 **Note:** This function appends passed data to existing values
 
@@ -940,7 +940,7 @@ withResolve(resolve)
 
 ## obj spec.initProvider.preferences
 
-"(Block List, Max: 1) (see below for nested schema)"
+"(Block List) (see below for nested schema)"
 
 ### fn spec.initProvider.preferences.withHomeDashboardUid
 
@@ -948,7 +948,7 @@ withResolve(resolve)
 withHomeDashboardUid(homeDashboardUid)
 ```
 
-"(String) The UID of the dashboard to display when a team member logs in. Defaults to “.\nThe UID of the dashboard to display when a team member logs in. Defaults to “."
+"(String) The UID of the dashboard to display when a team member logs in.\nThe UID of the dashboard to display when a team member logs in."
 
 ### fn spec.initProvider.preferences.withTheme
 
@@ -956,7 +956,7 @@ withHomeDashboardUid(homeDashboardUid)
 withTheme(theme)
 ```
 
-"(String) The default theme for this team. Available themes are light, dark, system, or an empty string for the default theme. Defaults to “.\nThe default theme for this team. Available themes are `light`, `dark`, `system`, or an empty string for the default theme. Defaults to “."
+"(String) The default theme for this team. Available themes are light, dark, system, or an empty string for the default theme.\nThe default theme for this team. Available themes are `light`, `dark`, `system`, or an empty string for the default theme."
 
 ### fn spec.initProvider.preferences.withTimezone
 
@@ -964,7 +964,7 @@ withTheme(theme)
 withTimezone(timezone)
 ```
 
-"(String) The default timezone for this team. Available values are utc, browser, or an empty string for the default. Defaults to “.\nThe default timezone for this team. Available values are `utc`, `browser`, or an empty string for the default. Defaults to “."
+"(String) The default timezone for this team. Available values are utc, browser, or an empty string for the default.\nThe default timezone for this team. Available values are `utc`, `browser`, or an empty string for the default."
 
 ### fn spec.initProvider.preferences.withWeekStart
 
@@ -972,11 +972,11 @@ withTimezone(timezone)
 withWeekStart(weekStart)
 ```
 
-"(String) The default week start day for this team. Available values are sunday, monday, saturday, or an empty string for the default. Defaults to “.\nThe default week start day for this team. Available values are `sunday`, `monday`, `saturday`, or an empty string for the default. Defaults to “."
+"(String) The default week start day for this team. Available values are sunday, monday, saturday, or an empty string for the default.\nThe default week start day for this team. Available values are `sunday`, `monday`, `saturday`, or an empty string for the default."
 
 ## obj spec.initProvider.teamSync
 
-"(Block List, Max: 1) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
+"(Block List) Sync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\nSync external auth provider groups with this Grafana team. Only available in Grafana Enterprise.\n* [Official documentation](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-team-sync/)\n* [HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/team_sync/)"
 
 ### fn spec.initProvider.teamSync.withGroups
 

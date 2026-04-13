@@ -40,6 +40,8 @@ permalink: /crossplane-provider-grafana/cluster/oncall/v1alpha1/outgoingWebhook/
     * [`fn withHttpMethod(httpMethod)`](#fn-specforproviderwithhttpmethod)
     * [`fn withIntegrationFilter(integrationFilter)`](#fn-specforproviderwithintegrationfilter)
     * [`fn withIntegrationFilterMixin(integrationFilter)`](#fn-specforproviderwithintegrationfiltermixin)
+    * [`fn withIntegrationFilterRef(integrationFilterRef)`](#fn-specforproviderwithintegrationfilterref)
+    * [`fn withIntegrationFilterRefMixin(integrationFilterRef)`](#fn-specforproviderwithintegrationfilterrefmixin)
     * [`fn withIsWebhookEnabled(isWebhookEnabled)`](#fn-specforproviderwithiswebhookenabled)
     * [`fn withName(name)`](#fn-specforproviderwithname)
     * [`fn withPreset(preset)`](#fn-specforproviderwithpreset)
@@ -52,10 +54,34 @@ permalink: /crossplane-provider-grafana/cluster/oncall/v1alpha1/outgoingWebhook/
       * [`fn withKey(key)`](#fn-specforproviderauthorizationheadersecretrefwithkey)
       * [`fn withName(name)`](#fn-specforproviderauthorizationheadersecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-specforproviderauthorizationheadersecretrefwithnamespace)
+    * [`obj spec.forProvider.integrationFilterRef`](#obj-specforproviderintegrationfilterref)
+      * [`fn withName(name)`](#fn-specforproviderintegrationfilterrefwithname)
+      * [`obj spec.forProvider.integrationFilterRef.policy`](#obj-specforproviderintegrationfilterrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderintegrationfilterrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderintegrationfilterrefpolicywithresolve)
+    * [`obj spec.forProvider.integrationFilterSelector`](#obj-specforproviderintegrationfilterselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderintegrationfilterselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderintegrationfilterselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderintegrationfilterselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.integrationFilterSelector.policy`](#obj-specforproviderintegrationfilterselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderintegrationfilterselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderintegrationfilterselectorpolicywithresolve)
     * [`obj spec.forProvider.passwordSecretRef`](#obj-specforproviderpasswordsecretref)
       * [`fn withKey(key)`](#fn-specforproviderpasswordsecretrefwithkey)
       * [`fn withName(name)`](#fn-specforproviderpasswordsecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-specforproviderpasswordsecretrefwithnamespace)
+    * [`obj spec.forProvider.teamRef`](#obj-specforproviderteamref)
+      * [`fn withName(name)`](#fn-specforproviderteamrefwithname)
+      * [`obj spec.forProvider.teamRef.policy`](#obj-specforproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamrefpolicywithresolve)
+    * [`obj spec.forProvider.teamSelector`](#obj-specforproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specforproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specforproviderteamselectorwithmatchlabelsmixin)
+      * [`obj spec.forProvider.teamSelector.policy`](#obj-specforproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specforproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specforproviderteamselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
     * [`fn withData(data)`](#fn-specinitproviderwithdata)
     * [`fn withForwardWholePayload(forwardWholePayload)`](#fn-specinitproviderwithforwardwholepayload)
@@ -63,6 +89,8 @@ permalink: /crossplane-provider-grafana/cluster/oncall/v1alpha1/outgoingWebhook/
     * [`fn withHttpMethod(httpMethod)`](#fn-specinitproviderwithhttpmethod)
     * [`fn withIntegrationFilter(integrationFilter)`](#fn-specinitproviderwithintegrationfilter)
     * [`fn withIntegrationFilterMixin(integrationFilter)`](#fn-specinitproviderwithintegrationfiltermixin)
+    * [`fn withIntegrationFilterRef(integrationFilterRef)`](#fn-specinitproviderwithintegrationfilterref)
+    * [`fn withIntegrationFilterRefMixin(integrationFilterRef)`](#fn-specinitproviderwithintegrationfilterrefmixin)
     * [`fn withIsWebhookEnabled(isWebhookEnabled)`](#fn-specinitproviderwithiswebhookenabled)
     * [`fn withName(name)`](#fn-specinitproviderwithname)
     * [`fn withPreset(preset)`](#fn-specinitproviderwithpreset)
@@ -75,10 +103,34 @@ permalink: /crossplane-provider-grafana/cluster/oncall/v1alpha1/outgoingWebhook/
       * [`fn withKey(key)`](#fn-specinitproviderauthorizationheadersecretrefwithkey)
       * [`fn withName(name)`](#fn-specinitproviderauthorizationheadersecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-specinitproviderauthorizationheadersecretrefwithnamespace)
+    * [`obj spec.initProvider.integrationFilterRef`](#obj-specinitproviderintegrationfilterref)
+      * [`fn withName(name)`](#fn-specinitproviderintegrationfilterrefwithname)
+      * [`obj spec.initProvider.integrationFilterRef.policy`](#obj-specinitproviderintegrationfilterrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderintegrationfilterrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderintegrationfilterrefpolicywithresolve)
+    * [`obj spec.initProvider.integrationFilterSelector`](#obj-specinitproviderintegrationfilterselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderintegrationfilterselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderintegrationfilterselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderintegrationfilterselectorwithmatchlabelsmixin)
+      * [`obj spec.initProvider.integrationFilterSelector.policy`](#obj-specinitproviderintegrationfilterselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderintegrationfilterselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderintegrationfilterselectorpolicywithresolve)
     * [`obj spec.initProvider.passwordSecretRef`](#obj-specinitproviderpasswordsecretref)
       * [`fn withKey(key)`](#fn-specinitproviderpasswordsecretrefwithkey)
       * [`fn withName(name)`](#fn-specinitproviderpasswordsecretrefwithname)
       * [`fn withNamespace(namespace)`](#fn-specinitproviderpasswordsecretrefwithnamespace)
+    * [`obj spec.initProvider.teamRef`](#obj-specinitproviderteamref)
+      * [`fn withName(name)`](#fn-specinitproviderteamrefwithname)
+      * [`obj spec.initProvider.teamRef.policy`](#obj-specinitproviderteamrefpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamrefpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamrefpolicywithresolve)
+    * [`obj spec.initProvider.teamSelector`](#obj-specinitproviderteamselector)
+      * [`fn withMatchControllerRef(matchControllerRef)`](#fn-specinitproviderteamselectorwithmatchcontrollerref)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specinitproviderteamselectorwithmatchlabelsmixin)
+      * [`obj spec.initProvider.teamSelector.policy`](#obj-specinitproviderteamselectorpolicy)
+        * [`fn withResolution(resolution)`](#fn-specinitproviderteamselectorpolicywithresolution)
+        * [`fn withResolve(resolve)`](#fn-specinitproviderteamselectorpolicywithresolve)
   * [`obj spec.providerConfigRef`](#obj-specproviderconfigref)
     * [`fn withName(name)`](#fn-specproviderconfigrefwithname)
     * [`obj spec.providerConfigRef.policy`](#obj-specproviderconfigrefpolicy)
@@ -346,6 +398,24 @@ withIntegrationFilterMixin(integrationFilter)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.forProvider.withIntegrationFilterRef
+
+```ts
+withIntegrationFilterRef(integrationFilterRef)
+```
+
+"References to Integration in oncall to populate integrationFilter."
+
+### fn spec.forProvider.withIntegrationFilterRefMixin
+
+```ts
+withIntegrationFilterRefMixin(integrationFilterRef)
+```
+
+"References to Integration in oncall to populate integrationFilter."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.forProvider.withIsWebhookEnabled
 
 ```ts
@@ -438,6 +508,88 @@ withNamespace(namespace)
 
 "Namespace of the secret."
 
+## obj spec.forProvider.integrationFilterRef
+
+"References to Integration in oncall to populate integrationFilter."
+
+### fn spec.forProvider.integrationFilterRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.integrationFilterRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.integrationFilterRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.integrationFilterRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.integrationFilterSelector
+
+"Selector for a list of Integration in oncall to populate integrationFilter."
+
+### fn spec.forProvider.integrationFilterSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.integrationFilterSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.integrationFilterSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.integrationFilterSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.integrationFilterSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.integrationFilterSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.forProvider.passwordSecretRef
 
 "(String, Sensitive) The auth data of the webhook. Used for Basic authentication\nThe auth data of the webhook. Used for Basic authentication"
@@ -465,6 +617,88 @@ withNamespace(namespace)
 ```
 
 "Namespace of the secret."
+
+## obj spec.forProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.forProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.forProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.forProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.forProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.forProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.forProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.forProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.forProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.initProvider
 
@@ -517,6 +751,24 @@ withIntegrationFilterMixin(integrationFilter)
 ```
 
 "(List of String) Restricts the outgoing webhook to only trigger if the event came from a selected integration. If no integrations are selected the outgoing webhook will trigger for any integration.\nRestricts the outgoing webhook to only trigger if the event came from a selected integration. If no integrations are selected the outgoing webhook will trigger for any integration."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.initProvider.withIntegrationFilterRef
+
+```ts
+withIntegrationFilterRef(integrationFilterRef)
+```
+
+"References to Integration in oncall to populate integrationFilter."
+
+### fn spec.initProvider.withIntegrationFilterRefMixin
+
+```ts
+withIntegrationFilterRefMixin(integrationFilterRef)
+```
+
+"References to Integration in oncall to populate integrationFilter."
 
 **Note:** This function appends passed data to existing values
 
@@ -612,6 +864,88 @@ withNamespace(namespace)
 
 "Namespace of the secret."
 
+## obj spec.initProvider.integrationFilterRef
+
+"References to Integration in oncall to populate integrationFilter."
+
+### fn spec.initProvider.integrationFilterRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.initProvider.integrationFilterRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.integrationFilterRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.integrationFilterRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.integrationFilterSelector
+
+"Selector for a list of Integration in oncall to populate integrationFilter."
+
+### fn spec.initProvider.integrationFilterSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.integrationFilterSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.integrationFilterSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.initProvider.integrationFilterSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.integrationFilterSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.integrationFilterSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
 ## obj spec.initProvider.passwordSecretRef
 
 "(String, Sensitive) The auth data of the webhook. Used for Basic authentication\nThe auth data of the webhook. Used for Basic authentication"
@@ -639,6 +973,88 @@ withNamespace(namespace)
 ```
 
 "Namespace of the secret."
+
+## obj spec.initProvider.teamRef
+
+"Reference to a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamRef.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referenced object."
+
+## obj spec.initProvider.teamRef.policy
+
+"Policies for referencing."
+
+### fn spec.initProvider.teamRef.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamRef.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
+
+## obj spec.initProvider.teamSelector
+
+"Selector for a Team in oncall to populate teamId."
+
+### fn spec.initProvider.teamSelector.withMatchControllerRef
+
+```ts
+withMatchControllerRef(matchControllerRef)
+```
+
+"MatchControllerRef ensures an object with the same controller reference\nas the selecting object is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+### fn spec.initProvider.teamSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"MatchLabels ensures an object with matching labels is selected."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.initProvider.teamSelector.policy
+
+"Policies for selection."
+
+### fn spec.initProvider.teamSelector.policy.withResolution
+
+```ts
+withResolution(resolution)
+```
+
+"Resolution specifies whether resolution of this reference is required.\nThe default is 'Required', which means the reconcile will fail if the\nreference cannot be resolved. 'Optional' means this reference will be\na no-op if it cannot be resolved."
+
+### fn spec.initProvider.teamSelector.policy.withResolve
+
+```ts
+withResolve(resolve)
+```
+
+"Resolve specifies when this reference should be resolved. The default\nis 'IfNotPresent', which will attempt to resolve the reference only when\nthe corresponding field is not present. Use 'Always' to resolve the\nreference on every reconcile."
 
 ## obj spec.providerConfigRef
 

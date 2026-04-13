@@ -34,6 +34,7 @@ permalink: /crossplane-provider-grafana/cluster/enterprise/v1alpha1/dataSourcePe
   * [`fn withManagementPolicies(managementPolicies)`](#fn-specwithmanagementpolicies)
   * [`fn withManagementPoliciesMixin(managementPolicies)`](#fn-specwithmanagementpoliciesmixin)
   * [`obj spec.forProvider`](#obj-specforprovider)
+    * [`fn withDatasourceType(datasourceType)`](#fn-specforproviderwithdatasourcetype)
     * [`fn withDatasourceUid(datasourceUid)`](#fn-specforproviderwithdatasourceuid)
     * [`fn withOrgId(orgId)`](#fn-specforproviderwithorgid)
     * [`fn withPermissions(permissions)`](#fn-specforproviderwithpermissions)
@@ -92,6 +93,7 @@ permalink: /crossplane-provider-grafana/cluster/enterprise/v1alpha1/dataSourcePe
           * [`fn withResolution(resolution)`](#fn-specforproviderpermissionsuserselectorpolicywithresolution)
           * [`fn withResolve(resolve)`](#fn-specforproviderpermissionsuserselectorpolicywithresolve)
   * [`obj spec.initProvider`](#obj-specinitprovider)
+    * [`fn withDatasourceType(datasourceType)`](#fn-specinitproviderwithdatasourcetype)
     * [`fn withDatasourceUid(datasourceUid)`](#fn-specinitproviderwithdatasourceuid)
     * [`fn withOrgId(orgId)`](#fn-specinitproviderwithorgid)
     * [`fn withPermissions(permissions)`](#fn-specinitproviderwithpermissions)
@@ -365,6 +367,14 @@ withManagementPoliciesMixin(managementPolicies)
 ## obj spec.forProvider
 
 
+
+### fn spec.forProvider.withDatasourceType
+
+```ts
+withDatasourceType(datasourceType)
+```
+
+"(String) The plugin type of the datasource (e.g. \"prometheus\"). If set, skips the lookup of the datasource type from the API.\nThe plugin type of the datasource (e.g. \"prometheus\"). If set, skips the lookup of the datasource type from the API."
 
 ### fn spec.forProvider.withDatasourceUid
 
@@ -767,6 +777,14 @@ withResolve(resolve)
 ## obj spec.initProvider
 
 "THIS IS A BETA FIELD. It will be honored\nunless the Management Policies feature flag is disabled.\nInitProvider holds the same fields as ForProvider, with the exception\nof Identifier and other resource reference fields. The fields that are\nin InitProvider are merged into ForProvider when the resource is created.\nThe same fields are also added to the terraform ignore_changes hook, to\navoid updating them after creation. This is useful for fields that are\nrequired on creation, but we do not desire to update them after creation,\nfor example because of an external controller is managing them, like an\nautoscaler."
+
+### fn spec.initProvider.withDatasourceType
+
+```ts
+withDatasourceType(datasourceType)
+```
+
+"(String) The plugin type of the datasource (e.g. \"prometheus\"). If set, skips the lookup of the datasource type from the API.\nThe plugin type of the datasource (e.g. \"prometheus\"). If set, skips the lookup of the datasource type from the API."
 
 ### fn spec.initProvider.withDatasourceUid
 
